@@ -27,16 +27,41 @@ print_success() {
     printf "\t: done\n"
 }
 
+error() {
+  echo "$@" 1>&2
+}
+
+fail() {
+  error "$@" && exit 1
+}
+
 function bootstrap() {
     ./check
     sudo docker rmi docker_opendds 
-    printf "rebuild Docker image...\n"
+    printf "build Docker image...\n"
     # ./rebuild docker
     print_success
-    printf "rebuild Vagrant box...\n"
+    printf "build Vagrant box...\n"
     vagrant box remove dds
     # ./rebuild vagrant
     print_success
+
+    # Let linux kernel forward the packet
+    printf "enable Linux kernel forwarding packets..."
+    forward=$(cat /proc/sys/net/ipv4/ip_forward)
+    if [ $forward -eq 0 ]; then
+	sudo 'echo 1 > /proc/sys/net/ipv4/ip_forward' 
+	print_success
+    else
+	fail "cannot let Linux kernel forwarding packets..."
+    fi
+
+    printf "check virtual box bridge..."
+    vboxnet=$(ip addr show vboxnet0 > /dev/null)
+    if [ $vboxnet -ne 0 ] ; then
+	vboxmanage hostonlyif create
+	print_success
+    fi
 }
 
 function destroy() {
@@ -50,7 +75,36 @@ function destroy() {
 }
 
 function run() {
-    echo "in run"
+
+    printf "run inforepo..."
+    sed -e "s/repo_port/$repo_port/g" \
+	-e "s/repo_ip/$repo_ip/g" \
+	-e "s/repo_gateway/$repo_gateway/g" \
+	./scripts/run_dds_win_template.bat > ./scripts/run_dds_win.bat ;
+    vagrant provision &
+    
+    # echo "wait a moment for inforepo starting..."
+    sleep 30
+    print_success
+    
+    printf "run publisher..."
+    docker run \
+	-d --name pub -v "$PWD/scripts:/scripts" -w /scripts --env "repo_port=$repo_port" \
+	--env "repo_ip=$repo_ip"  --env "host_port=$host_port" \
+	-p $host_port \
+	opendds_update \
+	/scripts/publisher.sh
+    sleep 5
+    print_success
+    
+    printf  "run subscriber..."
+    docker run \
+	-d --name sub -v "$PWD/scripts:/scripts" -w /scripts --env "repo_port=$repo_port" \
+	--env "repo_ip=$repo_ip" --env "host_port=$host_port" \
+	-p $host_port \
+	opendds_update \
+	/scripts/subscriber.sh
+    print_success
 }
 
 function terminate() {
@@ -62,25 +116,33 @@ function terminate() {
     print_success
 }
 
+function load() {
+    printf "load Vagrant box..."
+    vm_name=repo_vm
+    sed -e "s/repo_port/$repo_port/g" \
+	-e "s/vm_name/$vm_name/g" \
+	Vagrant_template > Vagrantfile
+
+    if ! vagrant status | grep repo_vm | grep -q running ; then  
+	vagrant up --no-provision
+	print_success
+    else 
+	printf "\nvirtual machine is already running..."
+    fi
+    printf "load Docker container..."
+    # actually we don't neet load docker since docker 
+    # run is super fast
+    print_success
+}
+
 function clean() {
     printf "clean Virutalbox VM..."
 #    vagrant destroy;
     print_success
     printf "clean Docker container..."
-#    docker rm ;
+    docker rm -f pub sub;
     print_success
 }
-
-function load() {
-    printf "load Vagrant box...\n"
-    # vagrant up
-    print_success
-    printf "load Docker container...\n"
-    # docker resume
-    print_success
-}
-
-
 
 # Reset in case getopts has been used previously in the shell.
 OPTIND=1
@@ -124,7 +186,7 @@ do
 	    do
 		if [ $# -eq 0 ] ; then break; fi
 		if ! [[ $1 =~ ^[0-9]+$ ]] ; then
-		    echo "need a number as info_port"; exit 1
+		    fail "need a number as info_port"
 		else
 		    ports[$i]=$1;
 		    shift
@@ -142,7 +204,7 @@ do
 	    terminate;
 	    break ;;
 	-- ) shift ;;
-	*)  echo "Internal error!" && exit 1;
+	*)  fail "Internal error!";
 	    break;;
     esac
 done
