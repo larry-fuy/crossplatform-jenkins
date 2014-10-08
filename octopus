@@ -10,7 +10,7 @@ function help() {
     printf "Options:\n"
     printf "\t-h,  --help\t\tShow this message\n"
     printf "\t-b,  --bootstrap\tBootstrap the whole platform (build Docker Linux container and Vagrant box from scratch)\n"
-    printf "\t-c,  --clean\t\tClean up the platform and remove Docker Linux container and Vagrant box\n"
+    printf "\t-d,  --destroy\t\tdestroy the platform and remove Docker Linux container and Vagrant box\n"
     printf "\t-r,  --run\t\tRun the tests\n"
     printf "\t-s,  --start\t\tStart the platform\n"
     printf "\t-t,  --terminate\tTerminate the platform\n"
@@ -22,40 +22,69 @@ function help() {
    printf "\toctopus -h\n"
 }
 
+# utility function
+print_success() {
+    printf "\t: done\n"
+}
+
 function bootstrap() {
     ./check
     sudo docker rmi docker_opendds 
     printf "rebuild Docker image...\n"
     # ./rebuild docker
+    print_success
     printf "rebuild Vagrant box...\n"
     vagrant box remove dds
     # ./rebuild vagrant
+    print_success
 }
 
-function terminate() {
-    echo "in terminate"
-}
-
-function clean() {
+function destroy() {
     terminate
     printf "clean Docker image...\n"
 #    sudo docker rmi docker_opendds 
+    print_success
     printf "clean Vagrant box...\n"
 #    vagrant destroy
+    print_success
 }
 
 function run() {
     echo "in run"
 }
 
-function start() {
-    echo "in start"
+function terminate() {
+    printf "terminate Virtualbox VM..."
+#    vagrant halt;
+    print_success
+    printf "terminate Docker container..."
+#    docker stop;
+    print_success
 }
+
+function clean() {
+    printf "clean Virutalbox VM..."
+#    vagrant destroy;
+    print_success
+    printf "clean Docker container..."
+#    docker rm ;
+    print_success
+}
+
+function load() {
+    printf "load Vagrant box...\n"
+    # vagrant up
+    print_success
+    printf "load Docker container...\n"
+    # docker resume
+    print_success
+}
+
 
 
 # Reset in case getopts has been used previously in the shell.
 OPTIND=1
-OPTIONS=$(getopt -o hbcrst -l bootstrap,clean,run,start,terminate -- "$@")
+OPTIONS=$(getopt -o hbdrlct -l bootstrap,destroy,run,load,clean,terminate -- "$@")
 [ $? != 0 ] && exit 1
 
 eval set -- "$OPTIONS"
@@ -77,19 +106,19 @@ do
 	    help;
 	    exit ;;
      	-b | --bootstrap )
-	    printf "boostrap whole platform (hours long), are you sure? [N/y]"
+	    printf "boostrap infrastructure for the platform (hours long), are you sure? [N/y]"
 	    bootstrap;
 	    break ;;
-     	-c | --clean )
-	    printf "clean up wholel platform..."
-	    clean;
+     	-d | --destroy )
+	    printf "destroy infrastructure for the platform...\n"
+	    destroy;
 	    break ;;
      	-r | --run )
-	    printf "run test...";
+	    printf "run test...\n";
 	    run;
 	    break ;;
-     	-s | --start )
-	    printf "start the platform...";
+     	-l | --load )
+	    printf "load the platform...\n";
 	    shift 2;
 	    for i in {0..2} 
 	    do
@@ -102,10 +131,14 @@ do
 		fi	  
 	    done;
 	    # echo ${ports[@]};
-	    start ${ports[@]};
+	    load ${ports[@]};
+	    break ;;
+     	-c | --clean )
+	    printf "clean the platform...\n"
+	    clean;
 	    break ;;
      	-t | --terminate )
-	    printf "terminate the platform";
+	    printf "terminate the test...\n";
 	    terminate;
 	    break ;;
 	-- ) shift ;;
