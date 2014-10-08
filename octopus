@@ -18,8 +18,8 @@ function help() {
     printf "Example:\n"
     printf "\toctopus --start 10000 1234 1234\t Start the platform (info_port=10000, pub_port=1234, sub_port=1234)\n"
     printf "\toctopus --start\t Start the platform with default ports\n"
-    printf "\toctopus --run \t Run the test (after start the platform)\n"
-    printf "\toctopus -h\n"
+    printf "\toctopus --run \t Run the test (after start the platform)\n" 
+   printf "\toctopus -h\n"
 }
 
 function bootstrap() {
@@ -44,12 +44,12 @@ function terminate() {
 
 # Reset in case getopts has been used previously in the shell.
 OPTIND=1
-OPTIONS=$(getopt -o hbcrs::t -l boostrap,clean,run,start::,terminate -- "$@")
+OPTIONS=$(getopt -o hbcrst -l boostrap,clean,run,start,terminate -- "$@")
 [ $? != 0 ] && exit 1
 
 eval set -- "$OPTIONS"
 
-echo "$OPTIONS"
+# echo "$OPTIONS"
 # Print help message if no parameters
 [ $# -eq 1 ] && help
 
@@ -77,32 +77,27 @@ do
 	    run;
 	    break ;;
      	-s | --start )
-	    is_start=1
-	    printf "start the platform..."
-	    case "$2" in
-		' ') echo "default value..."; shift 2;;
-		*) ports=$2; shift 2;;
-	     esac;
-	    shift ;;
+	    printf "start the platform...";
+	    shift 2;
+	    for i in {0..2} 
+	    do
+		if [ $# -eq 0 ] ; then break; fi
+		if ! [[ $1 =~ ^[0-9]+$ ]] ; then
+		    echo "need a number as info_port"; exit 1
+		else
+		    ports[$i]=$1;
+		    shift
+		fi	  
+	    done;
+#	    echo ${ports[@]};
+	    start ${ports[@]};
+	    break ;;
      	-t | --terminate )
 	    printf "terminate the platform";
 	    terminate;
 	    break ;;
 	-- ) shift ;;
-	*) 
-	    [ $is_start -ne 1 ] && echo "Internal error!" && exit 1;
-	    i=0
-	    while [ $# -gt 0 ]; do
-		if ! [[ $1 =~ ^[0-9]+$ ]] ; then
-		    echo "need a number as info_port"; exit 1
-		else
-		    ports[$i]=$1
-		    let i++
-		    shift
-		fi	  
-	    done;
-	    echo ${ports[@]};
-	    start ${ports[@]};
+	*)  echo "Internal error!" && exit 1;
 	    break;;
     esac
 done
