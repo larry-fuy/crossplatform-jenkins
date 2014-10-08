@@ -23,11 +23,25 @@ function help() {
 }
 
 function bootstrap() {
-    echo "in bootstrap"
+    ./check
+    sudo docker rmi docker_opendds 
+    printf "rebuild Docker image...\n"
+    # ./rebuild docker
+    printf "rebuild Vagrant box...\n"
+    vagrant box remove dds
+    # ./rebuild vagrant
+}
+
+function terminate() {
+    echo "in terminate"
 }
 
 function clean() {
-    echo "in clean"
+    terminate
+    printf "clean Docker image...\n"
+#    sudo docker rmi docker_opendds 
+    printf "clean Vagrant box...\n"
+#    vagrant destroy
 }
 
 function run() {
@@ -38,13 +52,10 @@ function start() {
     echo "in start"
 }
 
-function terminate() {
-    echo "in terminate"
-}
 
 # Reset in case getopts has been used previously in the shell.
 OPTIND=1
-OPTIONS=$(getopt -o hbcrst -l boostrap,clean,run,start,terminate -- "$@")
+OPTIONS=$(getopt -o hbcrst -l bootstrap,clean,run,start,terminate -- "$@")
 [ $? != 0 ] && exit 1
 
 eval set -- "$OPTIONS"
@@ -54,6 +65,7 @@ eval set -- "$OPTIONS"
 [ $# -eq 1 ] && help
 
 is_start=0
+# TODO: port detection algorithm 
 unset ports
 ports[0]=10000   # default info_port
 ports[1]=1234     # default pub_port
@@ -89,7 +101,7 @@ do
 		    shift
 		fi	  
 	    done;
-#	    echo ${ports[@]};
+	    # echo ${ports[@]};
 	    start ${ports[@]};
 	    break ;;
      	-t | --terminate )
