@@ -22,24 +22,65 @@ function help() {
    printf "\toctopus -h\n"
 }
 
-# utility function
+# auxilary function
 print_success() {
     printf "\t: done\n"
 }
 
 error() {
-  echo "$@" 1>&2
+    echo "$@" 1>&2
 }
 
 fail() {
-  error "$@" && exit 1
+    error "$@" && exit 1
 }
 
+function rotate
+{
+    # usage:
+    #   rotate &
+    #   ROTATE_PID=$!
+    #   your_task
+    #   kill -9 $ROTATE_PID
+    #  echo "\b\b  "
+    INTERVAL=1
+    RCOUNT="0"
+    # Sleep time between rotation intervals
+    while :
+    do
+	(( RCOUNT = RCOUNT + 1 ))
+	# Increment the RCOUNT
+	case $RCOUNT in
+	    1) echo ’-’"\b\c"
+		sleep $INTERVAL
+		;;
+	    2) echo ’\\’"\b\c"
+		sleep $INTERVAL
+		;;
+	    3) echo "|\b\c"
+		sleep $INTERVAL
+		;;
+	    4) echo "/\b\c"
+		sleep $INTERVAL
+		;;
+	    *)
+		RCOUNT="0"
+		;;
+	esac
+    done
+} # End of Function - rotate
+
+
+# major functions
 function bootstrap() {
     ./check
     sudo docker rmi docker_opendds 
     printf "build Docker image...\n"
+    rotate &
+    ROTATE_PID=$!
     # ./rebuild docker
+    kill -9 $ROTATE_PID
+    echo "\b\b  "
     print_success
     printf "build Vagrant box...\n"
     vagrant box remove dds
@@ -75,6 +116,17 @@ function destroy() {
 }
 
 function run() {
+    repo_port=$1
+    pub_port=$2
+    sub_port=$3
+    printf "check port of inforepo...\t%u\n" "$repo_port"
+    printf "check port of publisher...\t%u\n" "$pub_port"
+    printf "check port of subscriber...\t%u\n" "$sub_port"
+    echo "check ip of inforepo..."
+    vnet=$(vboxmanage showvminfo repo_vm | grep "NIC.*Host-only" | gawk '{print $8}' | sed -e "s/'//g" -e "s/,//g")
+    repo_gateway=$(ip addr show $vnet | grep -w inet | gawk '{print $2}' | sed 's/\/24//')
+    repo_ip=$(echo $repo_gateway | gawk -F. '{print $1"."$2"."$3"."$4+1}')
+    printf "\t%u\n" "$repo_ip"
 
     printf "run inforepo..."
     sed -e "s/repo_port/$repo_port/g" \
@@ -82,8 +134,6 @@ function run() {
 	-e "s/repo_gateway/$repo_gateway/g" \
 	./scripts/run_dds_win_template.bat > ./scripts/run_dds_win.bat ;
     vagrant provision &
-    
-    # echo "wait a moment for inforepo starting..."
     sleep 30
     print_success
     
@@ -112,7 +162,7 @@ function terminate() {
 #    vagrant halt;
     print_success
     printf "terminate Docker container..."
-#    docker stop;
+#    docker stop pub sub;
     print_success
 }
 
@@ -130,7 +180,7 @@ function load() {
 	printf "\nvirtual machine is already running..."
     fi
     printf "load Docker container..."
-    # actually we don't neet load docker since docker 
+    # actually we don't need to load docker since docker 
     # run is super fast
     print_success
 }
@@ -177,7 +227,7 @@ do
 	    break ;;
      	-r | --run )
 	    printf "run test...\n";
-	    run;
+	    run ${ports[@]};
 	    break ;;
      	-l | --load )
 	    printf "load the platform...\n";
