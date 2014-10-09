@@ -1,0 +1,1752 @@
+Updating '.':
+U    tests/DCPS/BuiltInTopicTest/run_test.pl
+U    tests/DCPS/ManyToMany/udp.ini
+U    tests/DCPS/ManyToMany/publisher.cpp
+U    tests/DCPS/ManyToMany/subscriber.cpp
+U    tests/DCPS/ManyToMany/pub_multicast_async.ini
+U    tests/DCPS/Reconnect/run_test.pl
+U    tests/DCPS/LargeSample/pub_multicast_async.ini
+U    tests/DCPS/PersistentInfoRepo/pub_multicast_async.ini
+U    tests/DCPS/PersistentDurability/publisher.cpp
+U    tests/DCPS/Compiler/idl_test1_main/main.cpp
+U    ChangeLog
+Updated to revision 6542.
+ACE_ROOT/ace/config.h exists, skipping configuration of ACE+TAO
+WARNING: overwriting existing GNUmakefile (saved a backup copy as GNUmakefile.bak.8)
+WARNING: overwriting existing setenv.sh (saved a backup copy as setenv.sh.bak.8)
+Completed configuring OpenDDS, next run 'make' to compile OpenDDS.
+You can use the generated setenv.sh script to set environment variables for
+future shell sessions.
+make[1]: Entering directory `/opt/ACE_wrappers/ace'
+
+GNUmakefile: /opt/ACE_wrappers/ace/GNUmakefile.ACE MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/ace'
+make[1]: Entering directory `/opt/ACE_wrappers/ACEXML/common'
+
+GNUmakefile: /opt/ACE_wrappers/ACEXML/common/GNUmakefile.ACEXML MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/ACEXML/common'
+make[1]: Entering directory `/opt/ACE_wrappers/ACEXML/parser/parser'
+
+GNUmakefile: /opt/ACE_wrappers/ACEXML/parser/parser/GNUmakefile.ACEXML_Parser MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/ACEXML/parser/parser'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/TAO_IDL'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/TAO_IDL/GNUmakefile.TAO_IDL_FE MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/TAO_IDL'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/TAO_IDL'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/TAO_IDL/GNUmakefile.TAO_IDL_BE MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/TAO_IDL'
+make[1]: Entering directory `/opt/ACE_wrappers/apps/gperf/src'
+
+GNUmakefile: /opt/ACE_wrappers/apps/gperf/src/GNUmakefile.gperf MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/apps/gperf/src'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/TAO_IDL'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/TAO_IDL/GNUmakefile.TAO_IDL_EXE MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/TAO_IDL'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/Messaging'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/Messaging/GNUmakefile.Messaging_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/Messaging'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/Valuetype'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/Valuetype/GNUmakefile.Valuetype_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/Valuetype'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/AnyTypeCode'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/AnyTypeCode/GNUmakefile.AnyTypeCode_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/AnyTypeCode'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/Codeset'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/Codeset/GNUmakefile.Codeset_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/Codeset'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/GNUmakefile.TAO_Core_idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/GNUmakefile.TAO MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/Codeset'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/Codeset/GNUmakefile.Codeset MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/Codeset'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/AnyTypeCode'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/AnyTypeCode/GNUmakefile.AnyTypeCode MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/AnyTypeCode'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/Valuetype'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/Valuetype/GNUmakefile.Valuetype MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/Valuetype'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/PI'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/PI/GNUmakefile.PI_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/PI'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/CodecFactory'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/CodecFactory/GNUmakefile.CodecFactory_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/CodecFactory'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/CodecFactory'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/CodecFactory/GNUmakefile.CodecFactory MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/CodecFactory'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/PI'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/PI/GNUmakefile.PI MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/PI'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/PortableServer'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/PortableServer/GNUmakefile.PortableServer_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/PortableServer'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/PortableServer'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/PortableServer/GNUmakefile.PortableServer MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/PortableServer'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/Messaging'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/Messaging/GNUmakefile.Messaging MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/Messaging'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service/GNUmakefile.Async_ImR_Client_IDL MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/DynamicInterface'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/DynamicInterface/GNUmakefile.DynamicInterface MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/DynamicInterface'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service/GNUmakefile.ImR_Activator_IDL MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service/GNUmakefile.ImR_Locator_IDL MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/orbsvcs/GNUmakefile.Svc_Utils MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service/GNUmakefile.ImR_Activator MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service/GNUmakefile.ImR_Activator_Service MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/IORManipulation'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/IORManipulation/GNUmakefile.IORManipulation_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/IORManipulation'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/IORManipulation'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/IORManipulation/GNUmakefile.IORManipulation MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/IORManipulation'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/IORTable'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/IORTable/GNUmakefile.Async_IORTable_Core_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/IORTable'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/IORTable'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/IORTable/GNUmakefile.IORTable_Core_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/IORTable'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/IORTable'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/IORTable/GNUmakefile.IORTable MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/IORTable'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/IORTable'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/IORTable/GNUmakefile.Async_IORTable MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/IORTable'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service/GNUmakefile.ImR_Locator MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/PI_Server'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/PI_Server/GNUmakefile.PI_Server_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/PI_Server'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/PI_Server'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/PI_Server/GNUmakefile.PI_Server MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/PI_Server'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service/GNUmakefile.ImR_Locator_Service MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/ImR_Client'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/ImR_Client/GNUmakefile.ImR_Client_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/ImR_Client'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/ImR_Client'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/ImR_Client/GNUmakefile.ImR_Client MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/ImR_Client'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service/GNUmakefile.tao_imr MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/ImplRepo_Service'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/orbsvcs/GNUmakefile.CosNaming_IDL MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/orbsvcs/GNUmakefile.CosNaming MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/orbsvcs/GNUmakefile.CosNaming_Skel MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/orbsvcs/GNUmakefile.CosNaming_Serv MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/Naming_Service'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/Naming_Service/GNUmakefile.Naming_Service MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/Naming_Service'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/Naming_Service'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/Naming_Service/GNUmakefile.NT_Naming_Service MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/Naming_Service'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/orbsvcs/GNUmakefile.PortableGroup MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/orbsvcs/GNUmakefile.FTORB_Utils MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/orbsvcs/GNUmakefile.FT_ClientORB MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/orbsvcs/orbsvcs/GNUmakefile.FT_ServerORB MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/orbsvcs/orbsvcs'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/Strategies'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/Strategies/GNUmakefile.Strategies_Core_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/Strategies'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tao/Strategies'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tao/Strategies/GNUmakefile.Strategies MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tao/Strategies'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tests/Hello'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tests/Hello/GNUmakefile.Hello_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tests/Hello'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tests/Hello'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tests/Hello/GNUmakefile.Hello_Server MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tests/Hello'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/tests/Hello'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/tests/Hello/GNUmakefile.Hello_Client MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/tests/Hello'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/utils/nslist'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/utils/nslist/GNUmakefile.nsadd MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/utils/nslist'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/utils/nslist'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/utils/nslist/GNUmakefile.nsdel MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/utils/nslist'
+make[1]: Entering directory `/opt/ACE_wrappers/TAO/utils/nslist'
+
+GNUmakefile: /opt/ACE_wrappers/TAO/utils/nslist/GNUmakefile.nslist MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/ACE_wrappers/TAO/utils/nslist'
+make[1]: Entering directory `/opt/trunk/dds/idl'
+
+GNUmakefile: /opt/trunk/dds/idl/GNUmakefile.opendds_idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds/idl'
+make[1]: Entering directory `/opt/trunk/dds'
+
+GNUmakefile: /opt/trunk/dds/GNUmakefile.OpenDDS_Dcps_idl_gen MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds'
+make[1]: Entering directory `/opt/trunk/dds'
+
+GNUmakefile: /opt/trunk/dds/GNUmakefile.OpenDDS_Dcps MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds'
+make[1]: Entering directory `/opt/trunk/DevGuideExamples/DCPS/Messenger.minimal'
+
+GNUmakefile: /opt/trunk/DevGuideExamples/DCPS/Messenger.minimal/GNUmakefile.MessengerMinimal_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/DevGuideExamples/DCPS/Messenger.minimal'
+make[1]: Entering directory `/opt/trunk/tools/modeling/codegen/model'
+
+GNUmakefile: /opt/trunk/tools/modeling/codegen/model/GNUmakefile.Model_Lib MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tools/modeling/codegen/model'
+make[1]: Entering directory `/opt/trunk/dds/DCPS/transport/tcp'
+
+GNUmakefile: /opt/trunk/dds/DCPS/transport/tcp/GNUmakefile.OpenDDS_Tcp MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds/DCPS/transport/tcp'
+make[1]: Entering directory `/opt/trunk/dds/DCPS/InfoRepoDiscovery'
+
+GNUmakefile: /opt/trunk/dds/DCPS/InfoRepoDiscovery/GNUmakefile.OpenDDS_InfoRepoDiscovery MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds/DCPS/InfoRepoDiscovery'
+make[1]: Entering directory `/opt/trunk/DevGuideExamples/DCPS/Messenger.minimal'
+
+GNUmakefile: /opt/trunk/DevGuideExamples/DCPS/Messenger.minimal/GNUmakefile.MessengerMinimal_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/DevGuideExamples/DCPS/Messenger.minimal'
+make[1]: Entering directory `/opt/trunk/DevGuideExamples/DCPS/Messenger.minimal'
+
+GNUmakefile: /opt/trunk/DevGuideExamples/DCPS/Messenger.minimal/GNUmakefile.MessengerMinimal_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/DevGuideExamples/DCPS/Messenger.minimal'
+make[1]: Entering directory `/opt/trunk/DevGuideExamples/DCPS/Messenger'
+
+GNUmakefile: /opt/trunk/DevGuideExamples/DCPS/Messenger/GNUmakefile.Messenger_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/DevGuideExamples/DCPS/Messenger'
+make[1]: Entering directory `/opt/trunk/DevGuideExamples/DCPS/Messenger'
+
+GNUmakefile: /opt/trunk/DevGuideExamples/DCPS/Messenger/GNUmakefile.Messenger_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/DevGuideExamples/DCPS/Messenger'
+make[1]: Entering directory `/opt/trunk/DevGuideExamples/DCPS/Messenger'
+
+GNUmakefile: /opt/trunk/DevGuideExamples/DCPS/Messenger/GNUmakefile.Messenger_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/DevGuideExamples/DCPS/Messenger'
+make[1]: Entering directory `/opt/trunk/DevGuideExamples/DCPS/Messenger_ZeroCopy'
+
+GNUmakefile: /opt/trunk/DevGuideExamples/DCPS/Messenger_ZeroCopy/GNUmakefile.Messenger_ZeroCopy_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/DevGuideExamples/DCPS/Messenger_ZeroCopy'
+make[1]: Entering directory `/opt/trunk/DevGuideExamples/DCPS/Messenger_ZeroCopy'
+
+GNUmakefile: /opt/trunk/DevGuideExamples/DCPS/Messenger_ZeroCopy/GNUmakefile.Messenger_ZeroCopy_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/DevGuideExamples/DCPS/Messenger_ZeroCopy'
+make[1]: Entering directory `/opt/trunk/DevGuideExamples/DCPS/Messenger_ZeroCopy'
+
+GNUmakefile: /opt/trunk/DevGuideExamples/DCPS/Messenger_ZeroCopy/GNUmakefile.Messenger_ZeroCopy_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/DevGuideExamples/DCPS/Messenger_ZeroCopy'
+make[1]: Entering directory `/opt/trunk/dds/DCPS/RTPS'
+
+GNUmakefile: /opt/trunk/dds/DCPS/RTPS/GNUmakefile.OpenDDS_Rtps MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds/DCPS/RTPS'
+make[1]: Entering directory `/opt/trunk/dds/DCPS/transport/multicast'
+
+GNUmakefile: /opt/trunk/dds/DCPS/transport/multicast/GNUmakefile.OpenDDS_Multicast MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds/DCPS/transport/multicast'
+make[1]: Entering directory `/opt/trunk/dds/DCPS/transport/rtps_udp'
+
+GNUmakefile: /opt/trunk/dds/DCPS/transport/rtps_udp/GNUmakefile.OpenDDS_Rtps_Udp MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds/DCPS/transport/rtps_udp'
+make[1]: Entering directory `/opt/trunk/dds/DCPS/transport/shmem'
+
+GNUmakefile: /opt/trunk/dds/DCPS/transport/shmem/GNUmakefile.OpenDDS_Shmem MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds/DCPS/transport/shmem'
+make[1]: Entering directory `/opt/trunk/dds/DCPS/transport/udp'
+
+GNUmakefile: /opt/trunk/dds/DCPS/transport/udp/GNUmakefile.OpenDDS_Udp MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds/DCPS/transport/udp'
+make[1]: Entering directory `/opt/trunk/dds/InfoRepo'
+
+GNUmakefile: /opt/trunk/dds/InfoRepo/GNUmakefile.DCPSInfoRepo_Lib MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds/InfoRepo'
+make[1]: Entering directory `/opt/trunk/dds/InfoRepo'
+
+GNUmakefile: /opt/trunk/dds/InfoRepo/GNUmakefile.DCPSInfoRepo_Federator MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds/InfoRepo'
+make[1]: Entering directory `/opt/trunk/dds/InfoRepo'
+
+GNUmakefile: /opt/trunk/dds/InfoRepo/GNUmakefile.DCPSInfoRepo_Serv MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds/InfoRepo'
+make[1]: Entering directory `/opt/trunk/dds/InfoRepo'
+
+GNUmakefile: /opt/trunk/dds/InfoRepo/GNUmakefile.DCPSInfoRepo_Main MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds/InfoRepo'
+make[1]: Entering directory `/opt/trunk/dds/monitor'
+
+GNUmakefile: /opt/trunk/dds/monitor/GNUmakefile.OpenDDS_monitor MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/dds/monitor'
+make[1]: Entering directory `/opt/trunk/examples/DCPS/DistributedContent'
+
+GNUmakefile: /opt/trunk/examples/DCPS/DistributedContent/GNUmakefile.DDS_DistributedContent_Node MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/examples/DCPS/DistributedContent'
+make[1]: Entering directory `/opt/trunk/examples/DCPS/IntroductionToOpenDDS'
+
+GNUmakefile: /opt/trunk/examples/DCPS/IntroductionToOpenDDS/GNUmakefile.StockQuoter_Common MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/examples/DCPS/IntroductionToOpenDDS'
+make[1]: Entering directory `/opt/trunk/examples/DCPS/IntroductionToOpenDDS'
+
+GNUmakefile: /opt/trunk/examples/DCPS/IntroductionToOpenDDS/GNUmakefile.StockQuoter_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/examples/DCPS/IntroductionToOpenDDS'
+make[1]: Entering directory `/opt/trunk/examples/DCPS/IntroductionToOpenDDS'
+
+GNUmakefile: /opt/trunk/examples/DCPS/IntroductionToOpenDDS/GNUmakefile.StockQuoter_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/examples/DCPS/IntroductionToOpenDDS'
+make[1]: Entering directory `/opt/trunk/examples/DCPS/Messenger_IOGR_Imr'
+
+GNUmakefile: /opt/trunk/examples/DCPS/Messenger_IOGR_Imr/GNUmakefile.DDS_Messenger_IOGR_Imr_Aggregator MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/examples/DCPS/Messenger_IOGR_Imr'
+make[1]: Entering directory `/opt/trunk/examples/DCPS/Messenger_IOGR_Imr'
+
+GNUmakefile: /opt/trunk/examples/DCPS/Messenger_IOGR_Imr/GNUmakefile.DDS_Messenger_IOGR_Imr_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/examples/DCPS/Messenger_IOGR_Imr'
+make[1]: Entering directory `/opt/trunk/examples/DCPS/Messenger_IOGR_Imr'
+
+GNUmakefile: /opt/trunk/examples/DCPS/Messenger_IOGR_Imr/GNUmakefile.DDS_Messenger_IOGR_Imr_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/examples/DCPS/Messenger_IOGR_Imr'
+make[1]: Entering directory `/opt/trunk/examples/DCPS/Messenger_IOGR_Imr'
+
+GNUmakefile: /opt/trunk/examples/DCPS/Messenger_IOGR_Imr/GNUmakefile.DDS_Messenger_IOGR_Imr_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/examples/DCPS/Messenger_IOGR_Imr'
+make[1]: Entering directory `/opt/trunk/examples/DCPS/Messenger_Imr'
+
+GNUmakefile: /opt/trunk/examples/DCPS/Messenger_Imr/GNUmakefile.DDS_Messenger_Imr_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/examples/DCPS/Messenger_Imr'
+make[1]: Entering directory `/opt/trunk/examples/DCPS/Messenger_Imr'
+
+GNUmakefile: /opt/trunk/examples/DCPS/Messenger_Imr/GNUmakefile.DDS_Messenger_Imr_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/examples/DCPS/Messenger_Imr'
+make[1]: Entering directory `/opt/trunk/examples/DCPS/Messenger_Imr'
+
+GNUmakefile: /opt/trunk/examples/DCPS/Messenger_Imr/GNUmakefile.DDS_Messenger_Imr_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/examples/DCPS/Messenger_Imr'
+make[1]: Entering directory `/opt/trunk/performance-tests/Bench/src'
+
+GNUmakefile: /opt/trunk/performance-tests/Bench/src/GNUmakefile.BenchIdl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/Bench/src'
+make[1]: Entering directory `/opt/trunk/performance-tests/Bench/src'
+
+GNUmakefile: /opt/trunk/performance-tests/Bench/src/GNUmakefile.BenchProcess MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/Bench/src'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/Sync'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/Sync/GNUmakefile.Sync_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/Sync'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/InfoRepo_population'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/InfoRepo_population/GNUmakefile.InfoRepo_Population_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/InfoRepo_population'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/Sync'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/Sync/GNUmakefile.Sync_ServerLib MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/Sync'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/Sync'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/Sync/GNUmakefile.Sync_ClientLib MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/Sync'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/InfoRepo_population'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/InfoRepo_population/GNUmakefile.InfoRepo_Population_SyncServer MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/InfoRepo_population'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/InfoRepo_population'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/InfoRepo_population/GNUmakefile.InfoRepo_Population_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/InfoRepo_population'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/InfoRepo_population'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/InfoRepo_population/GNUmakefile.InfoRepo_Population_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/InfoRepo_population'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/TypeNoKeyBounded'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/TypeNoKeyBounded/GNUmakefile.DCPS_Perf_TypeNoKeyBounded MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/TypeNoKeyBounded'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/MulticastListenerTest'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/MulticastListenerTest/GNUmakefile.DCPS_Perf_MulticastListenerTest_Pub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/MulticastListenerTest'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/MulticastListenerTest'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/MulticastListenerTest/GNUmakefile.DCPS_Perf_MulticastListenerTest_Sub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/MulticastListenerTest'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/Priority'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/Priority/GNUmakefile.Perf_Priority_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/Priority'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/Priority'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/Priority/GNUmakefile.Perf_Priority_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/Priority'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/Priority'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/Priority/GNUmakefile.Perf_Priority_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/Priority'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/SimpleE2ETest'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/SimpleE2ETest/GNUmakefile.DCPS_Perf_SimpleE2E_Pub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/SimpleE2ETest'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/SimpleE2ETest'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/SimpleE2ETest/GNUmakefile.DCPS_Perf_SimpleE2E_Sub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/SimpleE2ETest'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/SimpleLatency'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/SimpleLatency/GNUmakefile.SimpleLatency_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/SimpleLatency'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/SimpleLatency'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/SimpleLatency/GNUmakefile.DDS_SimpleLatency_Pub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/SimpleLatency'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/SimpleLatency'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/SimpleLatency/GNUmakefile.DDS_SimpleLatency_Sub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/SimpleLatency'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/SimpleLatency/raw_tcp/publisher'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/SimpleLatency/raw_tcp/publisher/GNUmakefile.DCPS_Perf_Raw_Tcp_Latency_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/SimpleLatency/raw_tcp/publisher'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/SimpleLatency/raw_tcp/subscriber'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/SimpleLatency/raw_tcp/subscriber/GNUmakefile.DCPS_Perf_Raw_Tcp_Latency_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/SimpleLatency/raw_tcp/subscriber'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/Sync'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/Sync/GNUmakefile.Sync_Server MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/Sync'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/TCPListenerTest'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/TCPListenerTest/GNUmakefile.DCPS_Perf_TCPListener_Pub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/TCPListenerTest'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/TCPListenerTest'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/TCPListenerTest/GNUmakefile.DCPS_Perf_TCPListener_Sub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/TCPListenerTest'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/TCPProfilingTest'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/TCPProfilingTest/GNUmakefile.DCPS_Perf_TCPProfiling_Pub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/TCPProfilingTest'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/TCPProfilingTest'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/TCPProfilingTest/GNUmakefile.DCPS_Perf_TCPProfiling_Sub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/TCPProfilingTest'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/TCPProfilingTest/raw_tcp/publisher'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/TCPProfilingTest/raw_tcp/publisher/GNUmakefile.DCPS_Perf_Raw_Tcp_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/TCPProfilingTest/raw_tcp/publisher'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/TCPProfilingTest/raw_tcp/subscriber'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/TCPProfilingTest/raw_tcp/subscriber/GNUmakefile.DCPS_Perf_Raw_Tcp_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/TCPProfilingTest/raw_tcp/subscriber'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/UDPListenerTest'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/UDPListenerTest/GNUmakefile.DCPS_Perf_UDPListener_Pub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/UDPListenerTest'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/UDPListenerTest'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/UDPListenerTest/GNUmakefile.DCPS_Perf_UDPListener_Sub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/UDPListenerTest'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/UDPNoKeyTest'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/UDPNoKeyTest/GNUmakefile.DCPS_Perf_UDPNoKey_Pub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/UDPNoKeyTest'
+make[1]: Entering directory `/opt/trunk/performance-tests/DCPS/UDPNoKeyTest'
+
+GNUmakefile: /opt/trunk/performance-tests/DCPS/UDPNoKeyTest/GNUmakefile.DCPS_Perf_UDPNoKey_Sub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/performance-tests/DCPS/UDPNoKeyTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/BidirMessenger'
+
+GNUmakefile: /opt/trunk/tests/DCPS/BidirMessenger/GNUmakefile.DDS_BidirMessenger_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/BidirMessenger'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/BidirMessenger'
+
+GNUmakefile: /opt/trunk/tests/DCPS/BidirMessenger/GNUmakefile.DDS_BidirMessenger_PubSub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/BidirMessenger'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooType4'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooType4/GNUmakefile.DcpsFooType4 MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooType4'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/BuiltInTopic'
+
+GNUmakefile: /opt/trunk/tests/DCPS/BuiltInTopic/GNUmakefile.BuiltInTopic MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/BuiltInTopic'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/BuiltInTopicTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/BuiltInTopicTest/GNUmakefile.DDS_BuiltInTopicTest_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/BuiltInTopicTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/BuiltInTopicTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/BuiltInTopicTest/GNUmakefile.DDS_BuiltInTopicTest_Monitor MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/BuiltInTopicTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/BuiltInTopicTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/BuiltInTopicTest/GNUmakefile.DDS_BuiltInTopicTest_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/BuiltInTopicTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/BuiltInTopicTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/BuiltInTopicTest/GNUmakefile.DDS_BuiltInTopicTest_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/BuiltInTopicTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/common'
+
+GNUmakefile: /opt/trunk/tests/DCPS/common/GNUmakefile.common MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/common'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/CompatibilityTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/CompatibilityTest/GNUmakefile.CompatibilityTest_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/CompatibilityTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/CompatibilityTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/CompatibilityTest/GNUmakefile.CompatibilityTest_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/CompatibilityTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Compiler/idl_test1_lib'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Compiler/idl_test1_lib/GNUmakefile.idl_test1_lib MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Compiler/idl_test1_lib'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Compiler/idl_test1_main'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Compiler/idl_test1_main/GNUmakefile.idl_test1_main MAKEFLAGS=w
+
+g++ -fvisibility=hidden -fvisibility-inlines-hidden -ggdb -pthread -fno-strict-aliasing -Wall -W -Wpointer-arith -pipe -D_GNU_SOURCE   -I/opt/ACE_wrappers -I/opt/trunk -D__ACE_INLINE__ -I/opt/ACE_wrappers -I/opt/ACE_wrappers/TAO -I../../../..  -c -o .obj/main.o main.cpp
+g++ -fvisibility=hidden -fvisibility-inlines-hidden -ggdb -pthread -fno-strict-aliasing -Wall -W -Wpointer-arith -pipe -D_GNU_SOURCE   -I/opt/ACE_wrappers -I/opt/trunk -D__ACE_INLINE__ -I/opt/ACE_wrappers -I/opt/ACE_wrappers/TAO -I../../../..  -Wl,-E -L/opt/ACE_wrappers/lib -L/opt/trunk/lib -L.  -L/opt/ACE_wrappers/lib  -L../../../../lib  -L../idl_test1_lib  -o idl_test1 .obj/main.o -lidl_test1_lib -lOpenDDS_InfoRepoDiscovery -lOpenDDS_Dcps -lTAO_PortableServer -lTAO_AnyTypeCode -lTAO -lACE -ldl -lrt 
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Compiler/idl_test1_main'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Compiler/idl_test2_lib'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Compiler/idl_test2_lib/GNUmakefile.idl_test2_lib MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Compiler/idl_test2_lib'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Compiler/idl_test3_lib'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Compiler/idl_test3_lib/GNUmakefile.idl_test3_lib MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Compiler/idl_test3_lib'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Compiler/idl_test3_main'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Compiler/idl_test3_main/GNUmakefile.idl_test3_main MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Compiler/idl_test3_main'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Compiler/namespace_conflict'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Compiler/namespace_conflict/GNUmakefile.DDS_Namespace_Conflict MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Compiler/namespace_conflict'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ConfigFile'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ConfigFile/GNUmakefile.ConfigFile MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ConfigFile'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ConfigTransports'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ConfigTransports/GNUmakefile.ConfigTransports_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ConfigTransports'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ConfigTransports'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ConfigTransports/GNUmakefile.ConfigTransports_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ConfigTransports'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ContentFilteredTopic'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ContentFilteredTopic/GNUmakefile.ContentFilteredTopic MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ContentFilteredTopic'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/CorbaSeq'
+
+GNUmakefile: /opt/trunk/tests/DCPS/CorbaSeq/GNUmakefile.CorbaSeq_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/CorbaSeq'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/CorbaSeq'
+
+GNUmakefile: /opt/trunk/tests/DCPS/CorbaSeq/GNUmakefile.CorbaSeq_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/CorbaSeq'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/CorbaSeq'
+
+GNUmakefile: /opt/trunk/tests/DCPS/CorbaSeq/GNUmakefile.CorbaSeq_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/CorbaSeq'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/DCPSInfoRepo'
+
+GNUmakefile: /opt/trunk/tests/DCPS/DCPSInfoRepo/GNUmakefile.dcpsinfo_test_pubsub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/DCPSInfoRepo'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/DPFactoryQos'
+
+GNUmakefile: /opt/trunk/tests/DCPS/DPFactoryQos/GNUmakefile.DDS_DPFactoryQos_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/DPFactoryQos'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/DPFactoryQos'
+
+GNUmakefile: /opt/trunk/tests/DCPS/DPFactoryQos/GNUmakefile.DDS_DPFactoryQos_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/DPFactoryQos'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/DPFactoryQos'
+
+GNUmakefile: /opt/trunk/tests/DCPS/DPFactoryQos/GNUmakefile.DDS_DPFactoryQos_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/DPFactoryQos'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooType'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooType/GNUmakefile.DcpsFooType MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooType'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/DcpsIntegration'
+
+GNUmakefile: /opt/trunk/tests/DCPS/DcpsIntegration/GNUmakefile.dcps_integration_topic MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/DcpsIntegration'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/DcpsIntegration'
+
+GNUmakefile: /opt/trunk/tests/DCPS/DcpsIntegration/GNUmakefile.dcps_integration_infrastructure MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/DcpsIntegration'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Deadline'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Deadline/GNUmakefile.DDS_Deadline_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Deadline'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Deadline'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Deadline/GNUmakefile.DDS_Deadline_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Deadline'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Deadline'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Deadline/GNUmakefile.DDS_Deadline_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Deadline'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/TestFramework'
+
+GNUmakefile: /opt/trunk/tests/DCPS/TestFramework/GNUmakefile.TestFramework MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/TestFramework'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/DestinationOrder'
+
+GNUmakefile: /opt/trunk/tests/DCPS/DestinationOrder/GNUmakefile.DestinationOrder MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/DestinationOrder'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Dispose'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Dispose/GNUmakefile.Dispose MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Dispose'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/DpShutdown'
+
+GNUmakefile: /opt/trunk/tests/DCPS/DpShutdown/GNUmakefile.DDS_DpShutdown_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/DpShutdown'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/DpShutdown'
+
+GNUmakefile: /opt/trunk/tests/DCPS/DpShutdown/GNUmakefile.DDS_DpShutdown MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/DpShutdown'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooType5'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooType5/GNUmakefile.DcpsFooType5 MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooType5'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Federation'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Federation/GNUmakefile.Federation_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Federation'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Federation'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Federation/GNUmakefile.Federation_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Federation'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FileSystemStorage'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FileSystemStorage/GNUmakefile.FileSystemStorage MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FileSystemStorage'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FilterExpression'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FilterExpression/GNUmakefile.FilterExpressionTest MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FilterExpression'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooType3'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooType3/GNUmakefile.DcpsFooType3 MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooType3'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooTest3_0'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooTest3_0/GNUmakefile.FooTest3_0_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooTest3_0'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooTest3_0'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooTest3_0/GNUmakefile.FooTest3_0_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooTest3_0'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooTest3_1'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooTest3_1/GNUmakefile.FooTest3_1_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooTest3_1'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooType3NoKey'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooType3NoKey/GNUmakefile.DcpsFooType3NoKey MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooType3NoKey'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooTest3_1'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooTest3_1/GNUmakefile.FooTest3_1NoKey_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooTest3_1'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooTest3_1'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooTest3_1/GNUmakefile.FooTest3_1_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooTest3_1'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooTest3_1'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooTest3_1/GNUmakefile.FooTest3_1NoKey_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooTest3_1'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooType3Unbounded'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooType3Unbounded/GNUmakefile.DcpsFooType3Unbounded MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooType3Unbounded'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooTest3_2'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooTest3_2/GNUmakefile.FooTest3_2_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooTest3_2'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooTest3_2'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooTest3_2/GNUmakefile.FooTest3_2_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooTest3_2'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooTest4'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooTest4/GNUmakefile.DcpsFooTest4 MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooTest4'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooTest4_0'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooTest4_0/GNUmakefile.DcpsFooTest4_0 MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooTest4_0'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooTest5'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooTest5/GNUmakefile.DcpsFooTest5Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooTest5'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooTest5'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooTest5/GNUmakefile.DcpsFooTest5Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooTest5'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/FooTest5_0'
+
+GNUmakefile: /opt/trunk/tests/DCPS/FooTest5_0/GNUmakefile.DcpsFooTest5_0 MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/FooTest5_0'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/GroupPresentation'
+
+GNUmakefile: /opt/trunk/tests/DCPS/GroupPresentation/GNUmakefile.DDS_GroupPresentation_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/GroupPresentation'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/GroupPresentation'
+
+GNUmakefile: /opt/trunk/tests/DCPS/GroupPresentation/GNUmakefile.DDS_GroupPresentation_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/GroupPresentation'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/GroupPresentation'
+
+GNUmakefile: /opt/trunk/tests/DCPS/GroupPresentation/GNUmakefile.DDS_GroupPresentation_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/GroupPresentation'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/GuardCondition'
+
+GNUmakefile: /opt/trunk/tests/DCPS/GuardCondition/GNUmakefile.GuardCondition MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/GuardCondition'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Inconsistent_Qos'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Inconsistent_Qos/GNUmakefile.DDS_Inconsistent_Qos_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Inconsistent_Qos'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Instances'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Instances/GNUmakefile.DDS_Instances_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Instances'
+make[1]: Entering directory `/opt/trunk/tests/Utils'
+
+GNUmakefile: /opt/trunk/tests/Utils/GNUmakefile.TestUtils MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/Utils'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Instances'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Instances/GNUmakefile.Instances_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Instances'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Instances'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Instances/GNUmakefile.Instances_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Instances'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/KeyTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/KeyTest/GNUmakefile.DDS_KeyTest_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/KeyTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/KeyTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/KeyTest/GNUmakefile.DDS_KeyTest_IsBounded MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/KeyTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/KeyTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/KeyTest/GNUmakefile.DDS_KeyTest_KeyMarshaling MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/KeyTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/KeyTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/KeyTest/GNUmakefile.KeyTest_MD5 MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/KeyTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/LargeSample'
+
+GNUmakefile: /opt/trunk/tests/DCPS/LargeSample/GNUmakefile.DDS_LargeSample_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/LargeSample'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/LargeSample'
+
+GNUmakefile: /opt/trunk/tests/DCPS/LargeSample/GNUmakefile.DDS_LargeSample_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/LargeSample'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/LargeSample'
+
+GNUmakefile: /opt/trunk/tests/DCPS/LargeSample/GNUmakefile.DDS_LargeSample_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/LargeSample'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/LatencyBudget'
+
+GNUmakefile: /opt/trunk/tests/DCPS/LatencyBudget/GNUmakefile.DDS_LatencyBudget_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/LatencyBudget'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/LatencyBudget'
+
+GNUmakefile: /opt/trunk/tests/DCPS/LatencyBudget/GNUmakefile.DDS_LatencyBudget_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/LatencyBudget'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/LatencyBudget'
+
+GNUmakefile: /opt/trunk/tests/DCPS/LatencyBudget/GNUmakefile.DDS_LatencyBudget_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/LatencyBudget'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Lifespan'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Lifespan/GNUmakefile.DDS_Lifespan_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Lifespan'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Lifespan'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Lifespan/GNUmakefile.DDS_Lifespan_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Lifespan'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Lifespan'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Lifespan/GNUmakefile.DDS_Lifespan_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Lifespan'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/LivelinessTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/LivelinessTest/GNUmakefile.LivelinessTestSubscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/LivelinessTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/LivelinessTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/LivelinessTest/GNUmakefile.LivelinessTestPublisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/LivelinessTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/LivelinessTimeout'
+
+GNUmakefile: /opt/trunk/tests/DCPS/LivelinessTimeout/GNUmakefile.LivelinessTimeout_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/LivelinessTimeout'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/LivelinessTimeout'
+
+GNUmakefile: /opt/trunk/tests/DCPS/LivelinessTimeout/GNUmakefile.LivelinessTimeout_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/LivelinessTimeout'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ManualAssertLiveliness'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ManualAssertLiveliness/GNUmakefile.DDS_ManualAssertLiveliness_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ManualAssertLiveliness'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ManualAssertLiveliness'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ManualAssertLiveliness/GNUmakefile.DDS_ManualAssertLiveliness_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ManualAssertLiveliness'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ManualAssertLiveliness'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ManualAssertLiveliness/GNUmakefile.DDS_ManualAssertLiveliness_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ManualAssertLiveliness'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ManyToMany'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ManyToMany/GNUmakefile.DDS_ManyToMany_Publisher MAKEFLAGS=w
+
+g++ -fvisibility=hidden -fvisibility-inlines-hidden -ggdb -pthread -fno-strict-aliasing -Wall -W -Wpointer-arith -pipe -D_GNU_SOURCE   -I/opt/ACE_wrappers -I/opt/trunk -D__ACE_INLINE__ -I/opt/ACE_wrappers -I/opt/ACE_wrappers/TAO -I../../..  -c -o .obj/publisher.o publisher.cpp
+g++ -fvisibility=hidden -fvisibility-inlines-hidden -ggdb -pthread -fno-strict-aliasing -Wall -W -Wpointer-arith -pipe -D_GNU_SOURCE   -I/opt/ACE_wrappers -I/opt/trunk -D__ACE_INLINE__ -I/opt/ACE_wrappers -I/opt/ACE_wrappers/TAO -I../../..  -Wl,-E -L/opt/ACE_wrappers/lib -L/opt/trunk/lib -L.  -L/opt/ACE_wrappers/lib  -L../../../lib  -L../LargeSample  -o publisher .obj/publisher.o .obj/Writer.o -lDDS_LargeSample_Idl -lOpenDDS_Rtps_Udp -lOpenDDS_Rtps -lOpenDDS_Shmem -lOpenDDS_Multicast -lOpenDDS_Udp -lOpenDDS_Tcp -lOpenDDS_InfoRepoDiscovery -lOpenDDS_Dcps -lTAO_PortableServer -lTAO_AnyTypeCode -lTAO -lACE -ldl -lrt 
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ManyToMany'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ManyToMany'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ManyToMany/GNUmakefile.DDS_ManyToMany_Subscriber MAKEFLAGS=w
+
+g++ -fvisibility=hidden -fvisibility-inlines-hidden -ggdb -pthread -fno-strict-aliasing -Wall -W -Wpointer-arith -pipe -D_GNU_SOURCE   -I/opt/ACE_wrappers -I/opt/trunk -D__ACE_INLINE__ -I/opt/ACE_wrappers -I/opt/ACE_wrappers/TAO -I../../..  -c -o .obj/subscriber.o subscriber.cpp
+g++ -fvisibility=hidden -fvisibility-inlines-hidden -ggdb -pthread -fno-strict-aliasing -Wall -W -Wpointer-arith -pipe -D_GNU_SOURCE   -I/opt/ACE_wrappers -I/opt/trunk -D__ACE_INLINE__ -I/opt/ACE_wrappers -I/opt/ACE_wrappers/TAO -I../../..  -Wl,-E -L/opt/ACE_wrappers/lib -L/opt/trunk/lib -L.  -L/opt/ACE_wrappers/lib  -L../../../lib  -L../LargeSample  -o subscriber .obj/subscriber.o .obj/DataReaderListener.o -lDDS_LargeSample_Idl -lOpenDDS_Rtps_Udp -lOpenDDS_Rtps -lOpenDDS_Shmem -lOpenDDS_Multicast -lOpenDDS_Udp -lOpenDDS_Tcp -lOpenDDS_InfoRepoDiscovery -lOpenDDS_Dcps -lTAO_PortableServer -lTAO_AnyTypeCode -lTAO -lACE -ldl -lrt 
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ManyToMany'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ManyTopicMultiProcess'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ManyTopicMultiProcess/GNUmakefile.DDS_ManyTopicMultiProcess_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ManyTopicMultiProcess'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ManyTopicMultiProcess'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ManyTopicMultiProcess/GNUmakefile.ManyTopicMultiProcessPublisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ManyTopicMultiProcess'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ManyTopicMultiProcess'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ManyTopicMultiProcess/GNUmakefile.ManyTopicMultiProcessSubscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ManyTopicMultiProcess'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ManyTopicTypes'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ManyTopicTypes/GNUmakefile.ManyTopicTypes MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ManyTopicTypes'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ManyTopicTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ManyTopicTest/GNUmakefile.ManyTopicTestPublisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ManyTopicTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ManyTopicTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ManyTopicTest/GNUmakefile.ManyTopicTestSubscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ManyTopicTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Messenger'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Messenger/GNUmakefile.DDS_Messenger_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Messenger'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Messenger'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Messenger/GNUmakefile.DDS_Messenger_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Messenger'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Messenger'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Messenger/GNUmakefile.DDS_Messenger_StackSubscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Messenger'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Messenger'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Messenger/GNUmakefile.DDS_Messenger_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Messenger'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/MetaStruct'
+
+GNUmakefile: /opt/trunk/tests/DCPS/MetaStruct/GNUmakefile.MetaStructTest MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/MetaStruct'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Monitor'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Monitor/GNUmakefile.Monitor_Messenger_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Monitor'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Monitor'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Monitor/GNUmakefile.Monitor_Messenger_Monitor MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Monitor'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Monitor'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Monitor/GNUmakefile.Monitor_Messenger_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Monitor'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Monitor'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Monitor/GNUmakefile.Monitor_Messenger_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Monitor'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/MultiDPTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/MultiDPTest/GNUmakefile.MultiDPTest_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/MultiDPTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/MultiDPTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/MultiDPTest/GNUmakefile.MultiDPTest_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/MultiDPTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/MultiRepoTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/MultiRepoTest/GNUmakefile.MultiRepoTest_Monitor MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/MultiRepoTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/MultiRepoTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/MultiRepoTest/GNUmakefile.MultiRepoTest_System MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/MultiRepoTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/MultiTopic'
+
+GNUmakefile: /opt/trunk/tests/DCPS/MultiTopic/GNUmakefile.MultiTopicTest MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/MultiTopic'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/NotifyTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/NotifyTest/GNUmakefile.DDS_NotifyTest_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/NotifyTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/NotifyTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/NotifyTest/GNUmakefile.DDS_NotifyTest_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/NotifyTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/NotifyTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/NotifyTest/GNUmakefile.DDS_NotifyTest_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/NotifyTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Ownership'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Ownership/GNUmakefile.DDS_Ownership_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Ownership'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Ownership'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Ownership/GNUmakefile.DDS_Ownership_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Ownership'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Ownership'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Ownership/GNUmakefile.DDS_Ownership_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Ownership'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Partition'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Partition/GNUmakefile.DDS_Partition_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Partition'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Partition'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Partition/GNUmakefile.DDS_Partition_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Partition'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Partition'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Partition/GNUmakefile.DDS_Partition_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Partition'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/PersistentDurability'
+
+GNUmakefile: /opt/trunk/tests/DCPS/PersistentDurability/GNUmakefile.DDS_PersistentDurability_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/PersistentDurability'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/PersistentDurability'
+
+GNUmakefile: /opt/trunk/tests/DCPS/PersistentDurability/GNUmakefile.DDS_PersistentDurability_Publisher MAKEFLAGS=w
+
+g++ -fvisibility=hidden -fvisibility-inlines-hidden -ggdb -pthread -fno-strict-aliasing -Wall -W -Wpointer-arith -pipe -D_GNU_SOURCE   -I/opt/ACE_wrappers -I/opt/trunk -D__ACE_INLINE__ -I/opt/ACE_wrappers -I/opt/ACE_wrappers/TAO -I../../..  -c -o .obj/publisher.o publisher.cpp
+g++ -fvisibility=hidden -fvisibility-inlines-hidden -ggdb -pthread -fno-strict-aliasing -Wall -W -Wpointer-arith -pipe -D_GNU_SOURCE   -I/opt/ACE_wrappers -I/opt/trunk -D__ACE_INLINE__ -I/opt/ACE_wrappers -I/opt/ACE_wrappers/TAO -I../../..  -Wl,-E -L/opt/ACE_wrappers/lib -L/opt/trunk/lib -L.  -L/opt/ACE_wrappers/lib  -L../../../lib  -o publisher .obj/publisher.o .obj/Writer.o .obj/DataWriterListenerImpl.o -lDDS_PersistentDurability_Idl -lOpenDDS_Tcp -lOpenDDS_InfoRepoDiscovery -lOpenDDS_Dcps -lTAO_PortableServer -lTAO_AnyTypeCode -lTAO -lACE -ldl -lrt 
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/PersistentDurability'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/PersistentDurability'
+
+GNUmakefile: /opt/trunk/tests/DCPS/PersistentDurability/GNUmakefile.DDS_PersistentDurability_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/PersistentDurability'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/PersistentInfoRepo'
+
+GNUmakefile: /opt/trunk/tests/DCPS/PersistentInfoRepo/GNUmakefile.PersistentInfoRepo_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/PersistentInfoRepo'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/PersistentInfoRepo'
+
+GNUmakefile: /opt/trunk/tests/DCPS/PersistentInfoRepo/GNUmakefile.PersistentInfoRepo_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/PersistentInfoRepo'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Presentation'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Presentation/GNUmakefile.Presentation MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Presentation'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Priority'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Priority/GNUmakefile.DDS_Priority_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Priority'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Priority'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Priority/GNUmakefile.DDS_Priority_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Priority'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Priority'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Priority/GNUmakefile.DDS_Priority_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Priority'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Prst_delayed_subscriber'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Prst_delayed_subscriber/GNUmakefile.DDS_Prst_Delayed_Subscriber_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Prst_delayed_subscriber'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Prst_delayed_subscriber'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Prst_delayed_subscriber/GNUmakefile.DDS_Prst_Delayed_Subscriber_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Prst_delayed_subscriber'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Prst_delayed_subscriber'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Prst_delayed_subscriber/GNUmakefile.DDS_Prst_Delayed_Subscriber_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Prst_delayed_subscriber'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/QueryCondition'
+
+GNUmakefile: /opt/trunk/tests/DCPS/QueryCondition/GNUmakefile.QueryCondition MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/QueryCondition'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ReadCondition'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ReadCondition/GNUmakefile.ReadCondition MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ReadCondition'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ReaderDataLifecycle'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ReaderDataLifecycle/GNUmakefile.ReaderDataLifecycle MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ReaderDataLifecycle'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Reconnect'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Reconnect/GNUmakefile.Reconnect_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Reconnect'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Reconnect'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Reconnect/GNUmakefile.Reconnect_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Reconnect'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Reconnect'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Reconnect/GNUmakefile.Reconnect_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Reconnect'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/RecorderReplayer'
+
+GNUmakefile: /opt/trunk/tests/DCPS/RecorderReplayer/GNUmakefile.DDS_RecorderReplayer_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/RecorderReplayer'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/RecorderReplayer'
+
+GNUmakefile: /opt/trunk/tests/DCPS/RecorderReplayer/GNUmakefile.DDS_RecorderReplayer_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/RecorderReplayer'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/RecorderReplayer'
+
+GNUmakefile: /opt/trunk/tests/DCPS/RecorderReplayer/GNUmakefile.DDS_RecorderReplayer_Relay MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/RecorderReplayer'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/RecorderReplayer'
+
+GNUmakefile: /opt/trunk/tests/DCPS/RecorderReplayer/GNUmakefile.DDS_RecorderReplayer_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/RecorderReplayer'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/RegisterInstance'
+
+GNUmakefile: /opt/trunk/tests/DCPS/RegisterInstance/GNUmakefile.register_instance_topic MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/RegisterInstance'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Rejects'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Rejects/GNUmakefile.DDS_Rejects_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Rejects'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Rejects'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Rejects/GNUmakefile.DDS_Rejects_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Rejects'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Rejects'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Rejects/GNUmakefile.DDS_Rejects_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Rejects'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Reliability/IDL'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Reliability/IDL/GNUmakefile.Reliability MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Reliability/IDL'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Reliability/pub'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Reliability/pub/GNUmakefile.Reliability_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Reliability/pub'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Reliability/sub'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Reliability/sub/GNUmakefile.Reliability_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Reliability/sub'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/RtpsDiscovery'
+
+GNUmakefile: /opt/trunk/tests/DCPS/RtpsDiscovery/GNUmakefile.RtpsDiscovery MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/RtpsDiscovery'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/RtpsMessages'
+
+GNUmakefile: /opt/trunk/tests/DCPS/RtpsMessages/GNUmakefile.RtpsMessages MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/RtpsMessages'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Serializer'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Serializer/GNUmakefile.SerializerTest MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Serializer'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Serializer_wstring'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Serializer_wstring/GNUmakefile.Serializer_Wstring_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Serializer_wstring'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Serializer_wstring'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Serializer_wstring/GNUmakefile.Serializer_Wstring_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Serializer_wstring'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/SetQosDeadline'
+
+GNUmakefile: /opt/trunk/tests/DCPS/SetQosDeadline/GNUmakefile.SetQosDeadline_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/SetQosDeadline'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/SetQosDeadline'
+
+GNUmakefile: /opt/trunk/tests/DCPS/SetQosDeadline/GNUmakefile.SetQosDeadline_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/SetQosDeadline'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/SetQosDeadline'
+
+GNUmakefile: /opt/trunk/tests/DCPS/SetQosDeadline/GNUmakefile.SetQosDeadline_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/SetQosDeadline'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/SetQosPartition'
+
+GNUmakefile: /opt/trunk/tests/DCPS/SetQosPartition/GNUmakefile.SetQosPartition_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/SetQosPartition'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/SetQosPartition'
+
+GNUmakefile: /opt/trunk/tests/DCPS/SetQosPartition/GNUmakefile.SetQosPartition_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/SetQosPartition'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/SetQosPartition'
+
+GNUmakefile: /opt/trunk/tests/DCPS/SetQosPartition/GNUmakefile.SetQosPartition_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/SetQosPartition'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/SharedTransport'
+
+GNUmakefile: /opt/trunk/tests/DCPS/SharedTransport/GNUmakefile.SharedTransport MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/SharedTransport'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/SimpleFooTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/SimpleFooTest/GNUmakefile.DcpsSimpleFooTest MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/SimpleFooTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/StatusCondition'
+
+GNUmakefile: /opt/trunk/tests/DCPS/StatusCondition/GNUmakefile.StatusCondition MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/StatusCondition'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/StringKey'
+
+GNUmakefile: /opt/trunk/tests/DCPS/StringKey/GNUmakefile.DDS_StringKey_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/StringKey'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/StringKey'
+
+GNUmakefile: /opt/trunk/tests/DCPS/StringKey/GNUmakefile.DDS_StringKey_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/StringKey'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/StringKey'
+
+GNUmakefile: /opt/trunk/tests/DCPS/StringKey/GNUmakefile.DDS_StringKey_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/StringKey'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/SubscriberCycle'
+
+GNUmakefile: /opt/trunk/tests/DCPS/SubscriberCycle/GNUmakefile.SubscriberCycle_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/SubscriberCycle'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/SubscriberCycle'
+
+GNUmakefile: /opt/trunk/tests/DCPS/SubscriberCycle/GNUmakefile.SubscriberCycle_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/SubscriberCycle'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Thrasher'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Thrasher/GNUmakefile.Thrasher_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Thrasher'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/Thrasher'
+
+GNUmakefile: /opt/trunk/tests/DCPS/Thrasher/GNUmakefile.Thrasher_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/Thrasher'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/TimeBasedFilter'
+
+GNUmakefile: /opt/trunk/tests/DCPS/TimeBasedFilter/GNUmakefile.TimeBasedFilter MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/TimeBasedFilter'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/TopicExpression'
+
+GNUmakefile: /opt/trunk/tests/DCPS/TopicExpression/GNUmakefile.TopicExpressionTest MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/TopicExpression'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/TopicReuse'
+
+GNUmakefile: /opt/trunk/tests/DCPS/TopicReuse/GNUmakefile.DDS_TopicReuse_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/TopicReuse'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/TopicReuse'
+
+GNUmakefile: /opt/trunk/tests/DCPS/TopicReuse/GNUmakefile.DDS_TopicReuse_TopicReuse MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/TopicReuse'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/TransientDurability'
+
+GNUmakefile: /opt/trunk/tests/DCPS/TransientDurability/GNUmakefile.DDS_TransientDurability_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/TransientDurability'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/TransientDurability'
+
+GNUmakefile: /opt/trunk/tests/DCPS/TransientDurability/GNUmakefile.DDS_TransientDurability_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/TransientDurability'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/TransientDurability'
+
+GNUmakefile: /opt/trunk/tests/DCPS/TransientDurability/GNUmakefile.DDS_TransientDurability_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/TransientDurability'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/TransientLocalTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/TransientLocalTest/GNUmakefile.DDS_TransientLocalTest_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/TransientLocalTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/TransientLocalTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/TransientLocalTest/GNUmakefile.DDS_TransientLocalTest_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/TransientLocalTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/TransientLocalTest'
+
+GNUmakefile: /opt/trunk/tests/DCPS/TransientLocalTest/GNUmakefile.DDS_TransientLocalTest_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/TransientLocalTest'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/UnitTests'
+
+GNUmakefile: /opt/trunk/tests/DCPS/UnitTests/GNUmakefile.UnitTests_BIT_DataReader MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/UnitTests'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/UnitTests'
+
+GNUmakefile: /opt/trunk/tests/DCPS/UnitTests/GNUmakefile.UnitTests_DisjointSequence MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/UnitTests'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/UnitTests'
+
+GNUmakefile: /opt/trunk/tests/DCPS/UnitTests/GNUmakefile.UnitTests_DurationToTimeValue MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/UnitTests'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/UnitTests'
+
+GNUmakefile: /opt/trunk/tests/DCPS/UnitTests/GNUmakefile.UnitTests_Fragmentation MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/UnitTests'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/UnitTests'
+
+GNUmakefile: /opt/trunk/tests/DCPS/UnitTests/GNUmakefile.UnitTests_GuidGenerator MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/UnitTests'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/UnitTests'
+
+GNUmakefile: /opt/trunk/tests/DCPS/UnitTests/GNUmakefile.UnitTests_LivelinessCompatibility MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/UnitTests'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/UnitTests'
+
+GNUmakefile: /opt/trunk/tests/DCPS/UnitTests/GNUmakefile.UnitTests_ParameterListConverter MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/UnitTests'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/UnitTests'
+
+GNUmakefile: /opt/trunk/tests/DCPS/UnitTests/GNUmakefile.UnitTests_Reassembly MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/UnitTests'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/UnitTests'
+
+GNUmakefile: /opt/trunk/tests/DCPS/UnitTests/GNUmakefile.UnitTests_RepoIdSequence MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/UnitTests'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/UnitTests'
+
+GNUmakefile: /opt/trunk/tests/DCPS/UnitTests/GNUmakefile.UnitTests_RtpsFragmentation MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/UnitTests'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/UnitTests'
+
+GNUmakefile: /opt/trunk/tests/DCPS/UnitTests/GNUmakefile.UnitTests_SequenceNumber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/UnitTests'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/UnitTests'
+
+GNUmakefile: /opt/trunk/tests/DCPS/UnitTests/GNUmakefile.UnitTests_TimeTSubtraction MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/UnitTests'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ViewState'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ViewState/GNUmakefile.ViewState MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ViewState'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/WaitForAck'
+
+GNUmakefile: /opt/trunk/tests/DCPS/WaitForAck/GNUmakefile.WaitForAck_Idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/WaitForAck'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/WaitForAck'
+
+GNUmakefile: /opt/trunk/tests/DCPS/WaitForAck/GNUmakefile.WaitForAck_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/WaitForAck'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/WaitForAck'
+
+GNUmakefile: /opt/trunk/tests/DCPS/WaitForAck/GNUmakefile.WaitForAck_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/WaitForAck'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ZeroCopyDataReaderListener'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ZeroCopyDataReaderListener/GNUmakefile.ZeroCopyDRL_idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ZeroCopyDataReaderListener'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ZeroCopyDataReaderListener'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ZeroCopyDataReaderListener/GNUmakefile.ZeroCopyDRL_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ZeroCopyDataReaderListener'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ZeroCopyDataReaderListener'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ZeroCopyDataReaderListener/GNUmakefile.ZeroCopyDRL_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ZeroCopyDataReaderListener'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ZeroCopyDataReaderListener'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ZeroCopyDataReaderListener/GNUmakefile.ZeroCopyDRL_StackSubscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ZeroCopyDataReaderListener'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/ZeroCopyRead'
+
+GNUmakefile: /opt/trunk/tests/DCPS/ZeroCopyRead/GNUmakefile.ZeroCopyRead MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/ZeroCopyRead'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/sub_init_loop'
+
+GNUmakefile: /opt/trunk/tests/DCPS/sub_init_loop/GNUmakefile.sub_init_loop_idl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/sub_init_loop'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/sub_init_loop'
+
+GNUmakefile: /opt/trunk/tests/DCPS/sub_init_loop/GNUmakefile.Sub_Init_Loop_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/sub_init_loop'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/sub_init_loop'
+
+GNUmakefile: /opt/trunk/tests/DCPS/sub_init_loop/GNUmakefile.Sub_Init_Loop_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/sub_init_loop'
+make[1]: Entering directory `/opt/trunk/tests/DCPS/unit'
+
+GNUmakefile: /opt/trunk/tests/DCPS/unit/GNUmakefile.DdsDcps_UnitTest MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/DCPS/unit'
+make[1]: Entering directory `/opt/trunk/tests/transport/error_handling'
+
+GNUmakefile: /opt/trunk/tests/transport/error_handling/GNUmakefile.error_handling MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/transport/error_handling'
+make[1]: Entering directory `/opt/trunk/tests/transport/rtps'
+
+GNUmakefile: /opt/trunk/tests/transport/rtps/GNUmakefile.DDS_Transport_Rtps_Pub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/transport/rtps'
+make[1]: Entering directory `/opt/trunk/tests/transport/rtps'
+
+GNUmakefile: /opt/trunk/tests/transport/rtps/GNUmakefile.DDS_Transport_Rtps_Sub MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/transport/rtps'
+make[1]: Entering directory `/opt/trunk/tests/transport/rtps_reliability'
+
+GNUmakefile: /opt/trunk/tests/transport/rtps_reliability/GNUmakefile.DDS_transport_rtps_reliability MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/transport/rtps_reliability'
+make[1]: Entering directory `/opt/trunk/tests/transport/simple'
+
+GNUmakefile: /opt/trunk/tests/transport/simple/GNUmakefile.DDS_Transport_Simple_Publisher MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/transport/simple'
+make[1]: Entering directory `/opt/trunk/tests/transport/simple'
+
+GNUmakefile: /opt/trunk/tests/transport/simple/GNUmakefile.DDS_Transport_Simple_Subscriber MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tests/transport/simple'
+make[1]: Entering directory `/opt/trunk/tools/dcpsinfo_dump'
+
+GNUmakefile: /opt/trunk/tools/dcpsinfo_dump/GNUmakefile.dcpsinfo_dump MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tools/dcpsinfo_dump'
+make[1]: Entering directory `/opt/trunk/tools/excelRTD'
+
+GNUmakefile: /opt/trunk/tools/excelRTD/GNUmakefile.ExcelRTD MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tools/excelRTD'
+make[1]: Entering directory `/opt/trunk/tools/monitor'
+
+GNUmakefile: /opt/trunk/tools/monitor/GNUmakefile.Monitor_App MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tools/monitor'
+make[1]: Entering directory `/opt/trunk/tools/repoctl'
+
+GNUmakefile: /opt/trunk/tools/repoctl/GNUmakefile.repoctl MAKEFLAGS=w
+
+make[1]: Leaving directory `/opt/trunk/tools/repoctl'

@@ -1,0 +1,215 @@
+(17|140711745341312) NOTICE: using DCPSDebugLevel value from command option (overrides value if it's in config file).
+(17|140711745341312) Service_Participant::set_repo_ior: Repo[ DEFAULT_REPO] == 196.128.0.2:15000
+(17|140711745341312) [repository/DEFAULT_REPO]: RepositoryIor == 196.128.0.2:15000
+(17|140711745341312) NOTICE: Service_Participant::load_domain_configuration failed to open [domain] section - using code default.
+(17|140711745341312) NOTICE: Service_Participant::intializeScheduling() - no scheduling policy specified, not setting policy.
+(17|140711745341312) Service_Participant::get_discovery: returning repository for domain 42, repo DEFAULT_REPO.
+(17|140711745341312) Service_Participant::get_discovery: returning repository for domain 42, repo DEFAULT_REPO.
+(17|140711745341312) Service_Participant::get_discovery: returning repository for domain 42, repo DEFAULT_REPO.
+(17|140711745341312) NullReaderListener::NullReaderListener()
+(17|140711745341312) MessageDataReaderImpl::enable_specific-data Cached_Allocator_With_Overflow 199d0d0 with 20 chunks
+(17|140711745341312) DataReaderImpl::enable Cached_Allocator_With_Overflow 199d480 with 20 chunks
+(17|140711745341312) Service_Participant::get_discovery: returning repository for domain 42, repo DEFAULT_REPO.
+(17|140711575938816) DataReaderImpl::add_association - bit 0 local 01030000.fac52ad6.00000004.00000107(60779f72) remote 01030000.fac52ad6.00000003.00000102(a23db7ed)
+(17|140711575938816) WriterInfo::WriterInfo: writer 01030000.fac52ad6.00000003.00000102(a23db7ed) added to reader 01030000.fac52ad6.00000004.00000107(60779f72).
+(17|140711575938816) DataReaderImpl::add_association: inserted writer 01030000.fac52ad6.00000003.00000102(a23db7ed).return 1 
+(17|140711575938816) DataReaderImpl::add_association: reader 01030000.fac52ad6.00000004.00000107(60779f72) is associated with writer 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711745341312) DataReaderImpl::remove_associations: bit 0 local 01030000.fac52ad6.00000004.00000107(60779f72) remote 01030000.fac52ad6.00000002.00000102(9f5d9e5d) num remotes 1 
+(17|140711567546112) TcpTransport::connect_tcp_datalink() [1] - creating send strategy with priority 0.
+(17|140711567546112) DirectPriorityMapper:thread_priority() - mapped TRANSPORT_PRIORITY value 0 to thread priority 0.
+(17|140711567546112) ReactorSynch::ReactorSynch() [0] - establishing synch without a worker.
+(17|140711567546112) TcpReceiveStrategy::start_i() - link:
+   There are 0 publications currently associated with this link:
+ connected to <unknown>:1234 registering with reactor to receive.
+(17|140711575938816) DataLink::make_reservation() - creating association local subscription 01030000.fac52ad6.00000004.00000107(60779f72) <--> with remote publication  01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711745341312) DataReaderImpl::remove_associations: the writer local 01030000.fac52ad6.00000002.00000102(9f5d9e5d) was already removed.
+(17|140711575938816) DataReaderImpl::add_association: id_to_handle_map_[ 01030000.fac52ad6.00000003.00000102(a23db7ed)] = 0x2.
+(17|140711575938816) NullReaderListener::on_subscription_matched()
+(17|140711575938816) ConditionImpl::signal_all()
+(17|140711575938816) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x4000.
+(17|140711575938816) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711575938816) Service_Participant::get_discovery: returning repository for domain 42, repo DEFAULT_REPO.
+(17|140711745341312) SubscriberImpl::reader_enabled, datareader(topic_name=Movie Discussion List) enabled
+(17|140711745341312) ConditionImpl::signal_all()
+(17|140711745341312) StatusConditionImpl::get_trigger_value() - mask==0x4000, changes==0x4000.
+(17|140711745341312) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711745341312) StatusConditionImpl::get_trigger_value() - mask==0x4000, changes==0x4000.
+ReaderSync: sub checking unmatched
+ReaderSync: sub match count 1 total count 1
+(17|140711745341312) StatusConditionImpl::get_trigger_value() - mask==0x4000, changes==0x0.
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: INSTANCE_REGISTRATION (0x02), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0001, Timestamp: 1412095585.247575000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::writer_became_alive: reader 01030000.fac52ad6.00000004.00000107(60779f72) from writer 01030000.fac52ad6.00000003.00000102(a23db7ed) previous state NOT_SET.
+(17|140711567546112) NullReaderListener::on_liveliness_changed()
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0x4000, changes==0x1000.
+(17|140711567546112) DataReaderImpl::notify_liveliness_change: listener at 0x199ab20, mask 0xffffffff.
+	NOTIFY: subscription 01030000.fac52ad6.00000004.00000107(60779f72), listener at: 0x0x199ab20
+	NOTIFY: writer[ 01030000.fac52ad6.00000003.00000102(a23db7ed)] == ALIVE
+
+(17|140711567546112) DataReaderImpl::handle_timeout: reader 01030000.fac52ad6.00000004.00000107(60779f72) has 0 live writers; from_reactor=0
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 3 is_new_instance 1 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: SAMPLE_DATA (0x00), Length: 62, Byte order: Little Endian (0x1), Sequence: 0x0002, Timestamp: 1412095585.247575000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::process_latency() - measured latency of 0S, 0mS for current sample.
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 3 is_new_instance 0 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: INSTANCE_REGISTRATION (0x02), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0003, Timestamp: 1412095585.248134000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 4 is_new_instance 1 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: SAMPLE_DATA (0x00), Length: 62, Byte order: Little Endian (0x1), Sequence: 0x0004, Timestamp: 1412095585.248134000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::process_latency() - measured latency of 0S, 0mS for current sample.
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 4 is_new_instance 0 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: INSTANCE_REGISTRATION (0x02), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0005, Timestamp: 1412095585.248429000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 5 is_new_instance 1 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: SAMPLE_DATA (0x00), Length: 62, Byte order: Little Endian (0x1), Sequence: 0x0006, Timestamp: 1412095585.248429000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::process_latency() - measured latency of 0S, 0mS for current sample.
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 5 is_new_instance 0 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: INSTANCE_REGISTRATION (0x02), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0007, Timestamp: 1412095585.248721000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 6 is_new_instance 1 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: SAMPLE_DATA (0x00), Length: 62, Byte order: Little Endian (0x1), Sequence: 0x0008, Timestamp: 1412095585.248721000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::process_latency() - measured latency of 0S, 0mS for current sample.
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 6 is_new_instance 0 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: INSTANCE_REGISTRATION (0x02), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0009, Timestamp: 1412095585.249014000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 7 is_new_instance 1 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: SAMPLE_DATA (0x00), Length: 62, Byte order: Little Endian (0x1), Sequence: 0x000a, Timestamp: 1412095585.249014000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::process_latency() - measured latency of 0S, 0mS for current sample.
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 7 is_new_instance 0 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: INSTANCE_REGISTRATION (0x02), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x000b, Timestamp: 1412095585.249302000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 8 is_new_instance 1 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: SAMPLE_DATA (0x00), Length: 62, Byte order: Little Endian (0x1), Sequence: 0x000c, Timestamp: 1412095585.249302000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::process_latency() - measured latency of 0S, 1mS for current sample.
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 8 is_new_instance 0 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: INSTANCE_REGISTRATION (0x02), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x000d, Timestamp: 1412095585.249587000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 9 is_new_instance 1 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: SAMPLE_DATA (0x00), Length: 62, Byte order: Little Endian (0x1), Sequence: 0x000e, Timestamp: 1412095585.249587000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::process_latency() - measured latency of 0S, 1mS for current sample.
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 9 is_new_instance 0 filtered 0 
+(17|140711567546112) Cached_Allocator_With_Overflow::malloc e80128f8 500 pool allocs 478 pool frees with 978 available
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: INSTANCE_REGISTRATION (0x02), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x000f, Timestamp: 1412095585.249885000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 10 is_new_instance 1 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: SAMPLE_DATA (0x00), Length: 62, Byte order: Little Endian (0x1), Sequence: 0x0010, Timestamp: 1412095585.249885000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::process_latency() - measured latency of 0S, 1mS for current sample.
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 10 is_new_instance 0 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: INSTANCE_REGISTRATION (0x02), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0011, Timestamp: 1412095585.250170000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 11 is_new_instance 1 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: SAMPLE_DATA (0x00), Length: 62, Byte order: Little Endian (0x1), Sequence: 0x0012, Timestamp: 1412095585.250170000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::process_latency() - measured latency of 0S, 1mS for current sample.
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 11 is_new_instance 0 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: INSTANCE_REGISTRATION (0x02), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0013, Timestamp: 1412095585.250442000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 12 is_new_instance 1 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: SAMPLE_DATA (0x00), Length: 62, Byte order: Little Endian (0x1), Sequence: 0x0014, Timestamp: 1412095585.250442000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::process_latency() - measured latency of 0S, 1mS for current sample.
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: reader 01030000.fac52ad6.00000004.00000107(60779f72) writer 01030000.fac52ad6.00000003.00000102(a23db7ed) instance 12 is_new_instance 0 filtered 0 
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: REQUEST_ACK (0x06), Length: 16, Byte order: Little Endian (0x1), Sequence: 0xffffffff00000000, Timestamp: 1412095585.250759000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received() - publication 01030000.fac52ad6.00000003.00000102(a23db7ed) received REQUEST_ACK for sequence 20 valid for the next 30 seconds.
+(17|140711567546112) DataReaderImpl::send_sample_ack() - 01030000.fac52ad6.00000004.00000107(60779f72) sending SAMPLE_ACK message with sequence 20 to publication 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) TransportSendStrategy::send() [1] - sending data at 0xe802c7b8.
+(17|140711567546112) TransportSendStrategy::do_send_packet() [1] - sending data at 0xe8028530.
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: DISPOSE_INSTANCE (0x04), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0015, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: UNREGISTER_INSTANCE (0x03), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0016, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: DISPOSE_INSTANCE (0x04), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0017, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: UNREGISTER_INSTANCE (0x03), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0018, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: DISPOSE_INSTANCE (0x04), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0019, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: UNREGISTER_INSTANCE (0x03), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x001a, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: DISPOSE_INSTANCE (0x04), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x001b, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: UNREGISTER_INSTANCE (0x03), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x001c, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) Cached_Allocator_With_Overflow::malloc e80128f8 1000 pool allocs 973 pool frees with 973 available
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: DISPOSE_INSTANCE (0x04), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x001d, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: UNREGISTER_INSTANCE (0x03), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x001e, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: DISPOSE_INSTANCE (0x04), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x001f, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: UNREGISTER_INSTANCE (0x03), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0020, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: DISPOSE_INSTANCE (0x04), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0021, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: UNREGISTER_INSTANCE (0x03), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0022, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: DISPOSE_INSTANCE (0x04), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0023, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: UNREGISTER_INSTANCE (0x03), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0024, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: DISPOSE_INSTANCE (0x04), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0025, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: UNREGISTER_INSTANCE (0x03), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0026, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: DISPOSE_INSTANCE (0x04), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0027, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711567546112) ConditionImpl::signal_all()
+(17|140711567546112) StatusConditionImpl::get_trigger_value() - mask==0xffffffff, changes==0x200.
+(17|140711567546112) ConditionImpl::signal_all() - number of sets: 0, locally: 0.
+(17|140711567546112) DataReaderImpl::data_received: 01030000.fac52ad6.00000004.00000107(60779f72) received sample: UNREGISTER_INSTANCE (0x03), Length: 4, Byte order: Little Endian (0x1), Key Fields Only, Sequence: 0x0028, Timestamp: 1412095585.252527000, Publication: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711575938816) DataReaderImpl::remove_associations: bit 0 local 01030000.fac52ad6.00000004.00000107(60779f72) remote 01030000.fac52ad6.00000003.00000102(a23db7ed) num remotes 1 
+(17|140711575938816) DataReaderImpl::writer_removed: reader 01030000.fac52ad6.00000004.00000107(60779f72) from writer 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711575938816) NullReaderListener::on_liveliness_changed()
+(17|140711575938816) ConditionImpl::signal_all()
+(17|140711575938816) StatusConditionImpl::get_trigger_value() - mask==0x4000, changes==0x1000.
+(17|140711575938816) DataReaderImpl::notify_liveliness_change: listener at 0x199ab20, mask 0xffffffff.
+	NOTIFY: subscription 01030000.fac52ad6.00000004.00000107(60779f72), listener at: 0x0x199ab20
+	NOTIFY: writer[ 01030000.fac52ad6.00000003.00000102(a23db7ed)] == ALIVE
+
+(17|140711575938816) DataReaderImpl::lookup_instance_handles: searching for handles for writer Ids: 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711575938816) DataLink::release_reservations() - releasing association local: 01030000.fac52ad6.00000004.00000107(60779f72) <--> with remote 01030000.fac52ad6.00000003.00000102(a23db7ed).
+(17|140711575938816) TcpTransport::release_datalink() - link with priority 0 released.
+   There are 0 publications currently associated with this link:
+(17|140711575938816) NullReaderListener::on_subscription_matched()
+(17|140711575938816) ConditionImpl::signal_all()
+(17|140711575938816) StatusConditionImpl::get_trigger_value() - mask==0x4000, changes==0x5000.
+(17|140711575938816) ConditionImpl::signal_all() - number of sets: 1, locally: 1.
+ReaderSync: sub checking unmatched
+ReaderSync: sub match count 0 total count 1
+ReaderSync: sub unmatched
+(17|140711745341312) Service_Participant::get_discovery: returning repository for domain 42, repo DEFAULT_REPO.
+(17|140711745341312) Service_Participant::get_discovery: returning repository for domain 42, repo DEFAULT_REPO.
+(17|140711745341312) Service_Participant::get_discovery: returning repository for domain 42, repo DEFAULT_REPO.
+(17|140711745341312) Service_Participant::get_discovery: returning repository for domain 42, repo DEFAULT_REPO.
+(17|140711745341312) Service_Participant::get_discovery: returning repository for domain 42, repo DEFAULT_REPO.
+(17|140711745341312) ReactorSynch::~ReactorSynch() [0] - dismantling synch without worker.
+(17|140711745341312) EndHistoricSamplesMissedSweeper::~EndHistoricSamplesMissedSweeper
+(17|140711745341312) NullReaderListener::~NullReaderListener()
+ 16:46:25.279416 (17|140711745341312) DomainParticipantFactoryImpl::~DomainParticipantFactoryImpl()
+ 16:46:25.304823 (17|140711745341312) Service_Participant::~Service_Participant()
