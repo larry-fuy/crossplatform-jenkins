@@ -1,0 +1,52 @@
+<autobuild>
+  <!-- The command used to create this file (on weevil) was -->
+  <!-- N:\nightly\BuildXML\buildxml.pl -base c:\tao_builds\taoadmin\DDS -branchname tao-1_6_7 -buildflags "debug=0 optimize=1" -checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk -compiler vc71 -creator mitza -dds 1 -environment JAVA_HOME=c:\Java\jdk1.6.0_23 -environment JAVA_PLATFORM=win32 -environment ANT_HOME=c:\Java\apache-ant-1.7.1 -environment JBOSS_HOME=c:\tao_builds\taoadmin\jboss-4.2.3.GA -environment GLIB_ROOT=C:\wireshark-win32-libs-1.2\gtk2 -environment WIRESHARK_SRC=C:\wireshark-1.2.6 -environment WIRETAP_VERSION=0.3.1 -mpcopt "-features java=1,wireshark=1" -outdir . -piggyback c:\tao_builds\taoadmin\1.6a\ACE_wrappers\build\vc71_d0o1 -sandbox 1 -->
+  <configuration>
+    <environment name="ACE_ROOT"        value="c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\ACE_wrappers"/>
+    <environment name="DDS_ROOT"        value="c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\DDS"/>
+    <environment name="TAO_ROOT"        value="c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\ACE_wrappers\\TAO"/>
+    <environment name="PATH"
+		 value="C:\\Perl64\bin;C:\\Windows\\System32;C:\\Windows;C:\\Windows\\System32\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files (X86)\\Subversion\\bin;c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\ACE_wrappers\\bin;c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\DDS\\bin;c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\ACE_wrappers\\lib;c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\DDS\\lib;" type="prefix"/>
+    <variable    name="build_name"      value="vc10_d1o0"/>
+    <variable    name="creator"         value="fuy"/>
+    <variable    name="log_file"        value="vc10_d1o0.log"/>
+    <variable    name="log_root"        value="c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\log"/>
+    <variable    name="project_root"    value="c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0"/>
+    <variable    name="root"            value="c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0"/>
+	<variable    name="vctool"          value="msbuild"/>
+  </configuration>
+
+  <!-- Build preparation -->
+  <command name="status"             options="on"/>
+  <command name="log"                options="on"/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk DDS"/>
+  <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/Middleware/sets-anon/ACE+TAO ."/>
+
+  <command name="file_manipulation"  options="type=create file=setenv.cmd output='set ACE_ROOT=c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\ACE_wrappers\nset DDS_ROOT=c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\DDS\nset 
+   MPC_ROOT=c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\MPC\nset  PATH=c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\ACE_wrappers\\bin;c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\DDS\\bin;c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\ACE_wrappers\\lib;c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\DDS\\lib;%PATH%\nset TAO_ROOT=c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\ACE_wrappers\\TAO\nset'"/>
+   <command name="file_manipulation"  options="type=update file=ACE_wrappers\\ace\\config.h output='#include \"ace\config-win32.h\" \n'" /> 
+  <command name="print_os_version"/>
+  <command name="print_env_vars"/>
+  <command name="print_ace_config"   options="ACE=OCIChangeLog TAO=OCIChangeLog CIAO=OCIChangeLog XML_URL=https://svn.ociweb.com/viewvc/nightly"/>
+  
+ <!-- 
+ <command name="check_compiler"     options="msbuild"/>
+  -->
+  <command name="generate_workspace" options="-type vc10 DDS_TAOv2_all.mwc dirs=DDS"/>
+
+  <!-- Build targets -->
+  <command name="vc10make" options="/p:Configuration=Debug c:\\tao_builds\\taoadmin\\dds_oci_tao-2_2_0_localhost_win7_vc10_d1o0\\DDS\\DDS_TAOv2_all.sln"/>
+ 
+  <!-- Post build -->
+<!--
+  <command name="anonymous_shell" options="perl java/build_scripts/jms_scoreboard.pl build -Dnative.debug=false -Dmwc.features=java=1,wireshark=1 "/>
+  <command name="auto_run_tests"  options="dir=. -ExeSubDir Release -Config SANDBOX -s \x22<AUTOBUILD_ROOT>\\win32sandbox\\sandbox -t 1200000\x22 -Config Win32 -Config NO_LOADAVG -a -l java/tests/dcps_java_tests.lst -l tools/modeling/tests/modeling_tests.lst"/>
+  <command name="anonymous_shell" options="perl
+					   java/build_scripts/jms_scoreboard.pl
+					   test
+					   -Dnative.debug=false"/>
+-->
+  <command name="log"             options="off"/>
+  <command name="process_logs"    options="copy"/>
+  <command name="status"          options="off"/>
+</autobuild>

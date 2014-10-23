@@ -31,7 +31,7 @@ check_version()
 upgrade=0
 # Docker
 ver=$(docker -v | gawk '{ print $3 }' | sed 's\,\\g')
-echo "check Docker...: $ver"
+printf "check Docker...: \t$ver\n"
 return_ver=$(check_version $ver $docker_ver)
 if [[ $return_ver -ne 0 ]]; then
   echo "Docker Version $ver must be greater than $docker_ver"
@@ -40,7 +40,7 @@ fi
 
 # Vagrant
 ver=$(vagrant -v | gawk '{ print $2 }')
-echo "check Vagrant...: $ver"
+printf "check Vagrant...: \t$ver\n"
 return_ver=$(check_version $ver $vagrant_ver)
 if [[ $return_ver -ne 0 ]]; then
   echo "Vagrant Version $ver must be greater than $vagrant_ver"
@@ -49,7 +49,7 @@ fi
 
 # VirtualBox
 ver=$(vboxmanage -v | gawk -F "_" '{print $1}')
-echo "check VirtualBox...: $ver"
+printf "check VirtualBox...: \t$ver\n"
 return_ver=$(check_version $ver $vbox_ver)
 if [[ $return_ver -ne 0 ]]; then
   echo "Vagrant Version $ver must be greater than $vbox_ver"
@@ -62,7 +62,7 @@ if [[ $? -ne 0 ]]; then
   echo "Cannot find Git"
   upgrade=1
 fi
-echo "check Git...: $ver"
+printf "check Git...: \t$ver\n"
 
 
 # require upgrade
@@ -70,5 +70,5 @@ if [ $upgrade -eq 1 ]; then
     echo "Please upgrade/install the required package first..."
     exit 1
 fi
-echo "all packages prepared"
+printf "checking packages...:\tdone\n"
 exit 0

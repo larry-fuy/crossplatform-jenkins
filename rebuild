@@ -5,6 +5,7 @@
 
 rebuild_v=0
 rebuild_d=0
+build_xml=" "
 OPTIONS=$(getopt -o h -- "$@")
 eval set -- "$OPTIONS"
 
@@ -12,15 +13,21 @@ while [ $# -gt 0 ]
 do
     case "$1" in
      	  -h)
-	        echo "Usage: rebuild [OPTIONS] [vagrant | docker]"
+	        echo "Usage: rebuild [OPTIONS] [vagrant | docker] build.xml"
 		echo "Force rebuild Docker image and Vagrant box";
 		echo "Options: ";
 		echo "    -h   Show this message"
 		break ;;
     	vagrant)
-		rebuild_v=1; shift ;;
+		rebuild_v=1; 
+		shift;
+		build_xml=$1
+	        break ;;
     	docker)
-		rebuild_d=1; shift ;;
+		rebuild_d=1; 
+		shift;
+		build_xml=$1;
+		break ;;
 	--) shift ;;
 	*) echo "Internal error!" ; exit 1 ;;
     esac
@@ -32,7 +39,8 @@ if [ $rebuild_v -eq 1 ]; then
       rm -rf vagrant-opendds
    fi
    git clone https://github.com/larry-fuy/vagrant-opendds
-   cd vagrant-opendds && ./build.sh
+   cp $build_xml vagrant-opendds
+   cd vagrant-opendds && ./build.sh $build_xml
 cd ..
 fi
 
@@ -42,6 +50,7 @@ if [ $rebuild_d -eq 1 ]; then
       rm -rf docker-opendds
    fi
    git clone https://github.com/larry-fuy/docker-opendds
-   cd docker-opendds && ./build.sh
+   cp $build_xml docker-opendds/scripts
+   cd docker-opendds && ./build.sh $build_xml
 cd ..
 fi

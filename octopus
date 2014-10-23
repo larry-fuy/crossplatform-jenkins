@@ -12,7 +12,7 @@ function help() {
     printf "\t-b,  --bootstrap\tBootstrap the whole platform (build Docker Linux container and Vagrant box from scratch)\n"
     printf "\t-d,  --destroy\t\tdestroy the platform and remove Docker Linux container and Vagrant box\n"
     printf "\t-r,  --run\t\tRun the tests\n"
-    printf "\t-s,  --start\t\tStart the platform\n"
+    printf "\t-s,  --start\t\tStart the platform (if the platform is built)\n"
     printf "\t-t,  --terminate\tTerminate the platform\n"
     printf ""
     printf "Example:\n"
@@ -24,7 +24,7 @@ function help() {
 
 # auxilary function
 print_success() {
-    printf "\t: done\n"
+    printf "\t done\n"
 }
 
 error() {
@@ -74,86 +74,63 @@ function rotate
 # major functions
 function bootstrap() {
     ./check
-    sudo docker rmi docker_opendds 
-    printf "build Docker image...\n"
-    rotate &
-    ROTATE_PID=$!
-    # ./rebuild docker
-    kill -9 $ROTATE_PID
-    echo "\b\b  "
+    # rebuild OpenDDS docker container
+    printf "build Docker image..."
+    # sudo docker rmi docker_opendds 
+    # ./rebuild docker $1
     print_success
-    printf "build Vagrant box...\n"
-    vagrant box remove dds
-    # ./rebuild vagrant
+
+    printf "build Vagrant box..."
+    # vagrant box remove dds
+    # ./rebuild vagrant $2
     print_success
 
     # Let linux kernel forward the packet
     printf "enable Linux kernel forwarding packets..."
     forward=$(cat /proc/sys/net/ipv4/ip_forward)
-    if [ $forward -eq 0 ]; then
-	sudo 'echo 1 > /proc/sys/net/ipv4/ip_forward' 
+    if [ $forward -eq 1 ]; then
+	echo "echo 1 > /proc/sys/net/ipv4/ip_forward" | sudo sh
 	print_success
     else
 	fail "cannot let Linux kernel forwarding packets..."
     fi
 
-    printf "check virtual box bridge..."
+    printf "check virtualbox bridge..."
     vboxnet=$(ip addr show vboxnet0 > /dev/null)
-    if [ $vboxnet -ne 0 ] ; then
+    if ! [ "$vboxnet" == "" ] ; then
 	vboxmanage hostonlyif create
-	print_success
     fi
+    print_success
 }
 
 function destroy() {
     terminate
-    printf "clean Docker image...\n"
+    printf "clean Docker image...:"
 #    sudo docker rmi docker_opendds 
     print_success
-    printf "clean Vagrant box...\n"
+    printf "clean Vagrant box...:"
 #    vagrant destroy
     print_success
 }
 
 function run() {
-    repo_port=$1
-    pub_port=$2
-    sub_port=$3
-    printf "check port of inforepo...\t%u\n" "$repo_port"
-    printf "check port of publisher...\t%u\n" "$pub_port"
-    printf "check port of subscriber...\t%u\n" "$sub_port"
-    echo "check ip of inforepo..."
-    vnet=$(vboxmanage showvminfo repo_vm | grep "NIC.*Host-only" | gawk '{print $8}' | sed -e "s/'//g" -e "s/,//g")
-    repo_gateway=$(ip addr show $vnet | grep -w inet | gawk '{print $2}' | sed 's/\/24//')
-    repo_ip=$(echo $repo_gateway | gawk -F. '{print $1"."$2"."$3"."$4+1}')
-    printf "\t%u\n" "$repo_ip"
 
     printf "run inforepo..."
-    sed -e "s/repo_port/$repo_port/g" \
-	-e "s/repo_ip/$repo_ip/g" \
-	-e "s/repo_gateway/$repo_gateway/g" \
-	./scripts/run_dds_win_template.bat > ./scripts/run_dds_win.bat ;
-    vagrant provision &
-    sleep 30
+    # vagrant provision &
+    # sleep 30
     print_success
     
     printf "run publisher..."
-    docker run \
-	-d --name pub -v "$PWD/scripts:/scripts" -w /scripts --env "repo_port=$repo_port" \
-	--env "repo_ip=$repo_ip"  --env "host_port=$host_port" \
-	-p $host_port \
-	opendds_update \
-	/scripts/publisher.sh
-    sleep 5
+    # docker exec \
+    # 	opendds_update \
+    # 	/scripts/publisher.sh
+    # sleep 5
     print_success
     
     printf  "run subscriber..."
-    docker run \
-	-d --name sub -v "$PWD/scripts:/scripts" -w /scripts --env "repo_port=$repo_port" \
-	--env "repo_ip=$repo_ip" --env "host_port=$host_port" \
-	-p $host_port \
-	opendds_update \
-	/scripts/subscriber.sh
+    # docker exec \
+    # 	opendds_update \
+    # 	/scripts/subscriber.sh
     print_success
 }
 
@@ -167,21 +144,51 @@ function terminate() {
 }
 
 function load() {
-    printf "load Vagrant box..."
-    vm_name=repo_vm
-    sed -e "s/repo_port/$repo_port/g" \
-	-e "s/vm_name/$vm_name/g" \
-	Vagrant_template > Vagrantfile
+    repo_port=$1
+    pub_port=$2
+    sub_port=$3
+    printf "check port of inforepo...\t%u\n" "$repo_port"
+    printf "check port of publisher...\t%u\n" "$pub_port"
+    printf "check port of subscriber...\t%u\n" "$sub_port"
 
-    if ! vagrant status | grep repo_vm | grep -q running ; then  
-	vagrant up --no-provision
-	print_success
-    else 
-	printf "\nvirtual machine is already running..."
+    printf "load inforepo...:"
+    # vagrant up --no-provision &
+    # sleep 30
+    print_success
+
+    printf "check ip of inforepo...:"
+    vnet=$(vboxmanage showvminfo repo_vm | grep "NIC.*Host-only" | gawk '{print $8}' | sed -e "s/'//g" -e "s/,//g")
+    if [ -z "$vnet" ]; then
+	fail "no virtualbox network..."
     fi
-    printf "load Docker container..."
-    # actually we don't need to load docker since docker 
-    # run is super fast
+    repo_gateway=$(ip addr show $vnet | grep -w inet | gawk '{print $2}' | sed 's/\/24//')
+    if [ -z "$repo_gateway" ]; then
+	fail "no virtulbox vm..."
+    fi 
+    repo_ip=$(echo $repo_gateway | gawk -F. '{print $1"."$2"."$3"."$4+1}')
+    sed -e "s/repo_port/$repo_port/g" \
+	-e "s/repo_ip/$repo_ip/g" \
+	-e "s/repo_gateway/$repo_gateway/g" \
+	./scripts/run_dds_win_template.bat > ./scripts/run_dds_win.bat ;
+    printf "\t%s\n" "$repo_ip"
+    
+    printf "load publisher..."
+    # docker run \
+    # 	-d --name pub -v "$PWD/scripts:/scripts" -w /scripts --env "repo_port=$repo_port" \
+    # 	--env "repo_ip=$repo_ip"  --env "host_port=$host_port" \
+    # 	-p $host_port \
+    # 	opendds_update \
+    # 	/bin/bash
+    #sleep 5
+    print_success
+    
+    printf  "load subscriber..."
+    # docker run \
+    # 	-d --name sub -v "$PWD/scripts:/scripts" -w /scripts --env "repo_port=$repo_port" \
+    # 	--env "repo_ip=$repo_ip" --env "host_port=$host_port" \
+    # 	-p $host_port \
+    # 	opendds_update \
+    # 	/bin/bash
     print_success
 }
 
@@ -190,18 +197,20 @@ function clean() {
 #    vagrant destroy;
     print_success
     printf "clean Docker container..."
-    docker rm -f pub sub;
+#    docker rm -f pub sub;
     print_success
 }
 
+
+# main function is simple  just switch to different action
 # Reset in case getopts has been used previously in the shell.
 OPTIND=1
-OPTIONS=$(getopt -o hbdrlct -l bootstrap,destroy,run,load,clean,terminate -- "$@")
+OPTIONS=$(getopt -o hbdrlct -l bootstrap,destroy,load,clean,run,terminate -- "$@")
 [ $? != 0 ] && exit 1
 
 eval set -- "$OPTIONS"
 
-# echo "$OPTIONS"
+ echo "$OPTIONS"
 # Print help message if no parameters
 [ $# -eq 1 ] && help
 
@@ -218,11 +227,18 @@ do
 	    help;
 	    exit ;;
      	-b | --bootstrap )
-	    printf "boostrap infrastructure for the platform (hours long), are you sure? [N/y]"
-	    bootstrap;
+	    printf "bootstrap infrastructure for the platform (hours long), are you sure? [N/y]\n"
+	    shift 2;
+	    linux_cfg_xml=" "
+	    win_cfg_xml=" "
+	    if [ $# -ne 0 ] ; then
+		linux_cfg_xml=$1
+		win_cfg_xml=$2
+	    fi 
+	    bootstrap $linux_cfg_xml $win_cfg_xml
 	    break ;;
      	-d | --destroy )
-	    printf "destroy infrastructure for the platform...\n"
+	    printf "destroy the platform...\n"
 	    destroy;
 	    break ;;
      	-r | --run )
