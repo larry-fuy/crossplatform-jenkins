@@ -81,7 +81,7 @@ function bootstrap() {
     print_success
 
     printf "build Vagrant box..."
-    vagrant box remove dds
+    vagrant box remove --force dds
     cd vagrant-opendds && ./build.sh
     cd ..
     print_success
@@ -112,9 +112,9 @@ function destroy() {
     printf "clean Vagrant box...:"
     vm_id=$(vagrant global-status | grep ' opendds ' | gawk '{print $1}')
     if  [ -n "$vm_id" ]; then 
-	vagrant destroy $vm_id
+	vagrant destroy -f $vm_id
     fi
-    vagrant box remove dds
+    vagrant box remove -f dds
     print_success
 }
 
@@ -132,24 +132,24 @@ function run() {
     
     printf "run publisher..."
     docker start pub
-#    if [ $# -ne 0 ]; then
-#	docker exec -d pub \
-#	    /scripts/publisher_autobuild.sh $1
-#     else
-#	docker exec -d pub \
-#	    /scripts/publisher.sh
-#    fi
+   if [ $# -ne 0 ]; then
+	docker exec -d pub \
+	    /scripts/publisher_autobuild.sh $1
+    else
+	docker exec -d pub \
+	    /scripts/publisher.sh
+   fi
     print_success
     
     printf  "run subscriber..."
     docker start sub
- #   if [ $# -ne 0 ]; then
-#	docker exec -d sub \
-#	    /scripts/subscriber_autobuild.sh $1
-#     else
-#	docker exec -d sub \
-#	    /scripts/subscriber.sh
-#    fi
+   if [ $# -ne 0 ]; then
+	docker exec -d sub \
+	    /scripts/subscriber_autobuild.sh $1
+    else
+	docker exec -d sub \
+	    /scripts/subscriber.sh
+   fi
     print_success
 }
 
