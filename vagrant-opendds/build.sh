@@ -19,6 +19,7 @@ vagrant up
 # repacking a box
 vagrant package --base open_dds --output dds.box 
 vagrant box add -f --name dds ./dds.box
+rm -rf dds.box
 
 # clean
 vagrant destroy
