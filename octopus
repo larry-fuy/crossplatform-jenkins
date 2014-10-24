@@ -122,34 +122,34 @@ function run() {
 
     printf "run inforepo..."
     vagrant up --no-provision
-    if [ $# -ne 0 ]; then
-	# sed -i 's/dds_build_win/$2/g' install_opendds_autobuild.bat
-	# vagrant ssh -c "c:\vagrant\install_opendss_autobuild.bat"
-    else
-#	 vagrant ssh -c "c:\vagrant\install_opendss_configure.bat"
-    fi
+    # if [ $# -ne 0 ]; then
+    # 	sed -i 's/dds_build_win/$2/g' install_opendds_autobuild.bat
+    # 	vagrant ssh -c "c:\vagrant\install_opendss_autobuild.bat"
+    # else
+    # 	 vagrant ssh -c "c:\vagrant\install_opendss_configure.bat"
+    # fi
     print_success
     
     printf "run publisher..."
     docker start pub
-    if [ $# -ne 0 ]; then
+#    if [ $# -ne 0 ]; then
 #	docker exec -d pub \
 #	    /scripts/publisher_autobuild.sh $1
-     else
+#     else
 #	docker exec -d pub \
 #	    /scripts/publisher.sh
-    fi
+#    fi
     print_success
     
     printf  "run subscriber..."
     docker start sub
-    if [ $# -ne 0 ]; then
+ #   if [ $# -ne 0 ]; then
 #	docker exec -d sub \
 #	    /scripts/subscriber_autobuild.sh $1
-     else
+#     else
 #	docker exec -d sub \
 #	    /scripts/subscriber.sh
-    fi
+#    fi
     print_success
 }
 
