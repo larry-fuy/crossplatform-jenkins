@@ -20,6 +20,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network "forwarded_port", guest: repo_port, host: repo_port
   config.vm.network :forwarded_port, guest: 3389, host: 3389, id: "rdp", auto_correct: true
-  config.vm.network "private_network", ip: "196.128.0.2"
-  config.vm.provision "shell", path: "./scripts/run_dds_win.bat"
+#  config.vm.network "private_network", ip: "196.128.0.2"
+#  config.vm.provision "shell", path: "./scripts/run_dds_win.bat"
 end

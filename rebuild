@@ -19,38 +19,18 @@ do
 		echo "    -h   Show this message"
 		break ;;
     	vagrant)
-		rebuild_v=1; 
-		shift;
 		build_xml=$1
-	        break ;;
-    	docker)
-		rebuild_d=1; 
+		cp $build_xml vagrant-opendds/
+		vagrant-opendds/build.sh $build_xml
 		shift;
+		break ;;
+    	docker)
 		build_xml=$1;
+		cp $build_xml docker-opendds/scripts/
+		docker-opendds/build.sh $build_xml
+		shift;
 		break ;;
 	--) shift ;;
 	*) echo "Internal error!" ; exit 1 ;;
     esac
 done
- 
-# rebuild Vagrant box 
-if [ $rebuild_v -eq 1 ]; then
-   if [ -d vagrant-opendds ] ; then
-      rm -rf vagrant-opendds
-   fi
-   git clone https://github.com/larry-fuy/vagrant-opendds
-   cp $build_xml vagrant-opendds
-   cd vagrant-opendds && ./build.sh $build_xml
-cd ..
-fi
-
-# rebuild Docker image
-if [ $rebuild_d -eq 1 ]; then
-   if [ -d docker-opendds ] ; then
-      rm -rf docker-opendds
-   fi
-   git clone https://github.com/larry-fuy/docker-opendds
-   cp $build_xml docker-opendds/scripts
-   cd docker-opendds && ./build.sh $build_xml
-cd ..
-fi

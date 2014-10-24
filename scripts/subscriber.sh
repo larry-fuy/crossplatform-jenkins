@@ -1,4 +1,10 @@
 #!/bin/sh
+cd /DDS 
+svn update
+./configure
+chmod +x ./setenv.sh && ./setenv.sh
+make
+
 rm -f /scripts/sub.log
 touch /scripts/sub.log
 exec 2>&1 > /scripts/sub.log

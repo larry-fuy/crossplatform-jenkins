@@ -1,4 +1,10 @@
 #!/bin/sh
+cd /DDS 
+svn update
+./configure
+chmod +x ./setenv.sh && ./setenv.sh
+make
+
 rm -f /scripts/pub.log
 touch /scripts/pub.log
 exec 1> /scripts/pub.log

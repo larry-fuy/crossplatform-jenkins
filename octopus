@@ -76,13 +76,14 @@ function bootstrap() {
     ./check
     # rebuild OpenDDS docker container
     printf "build Docker image..."
-    # sudo docker rmi docker_opendds 
-    # ./rebuild docker $1
+    sudo docker rmi docker_opendds 
+    docker build --force-rm=true --no-cache=true -t docker_opendds docker-opendds/Dockerfile
     print_success
 
     printf "build Vagrant box..."
-    # vagrant box remove dds
-    # ./rebuild vagrant $2
+    vagrant box remove dds
+    cd vagrant-opendds && ./build.sh
+    cd ..
     print_success
 
     # Let linux kernel forward the packet
@@ -104,42 +105,61 @@ function bootstrap() {
 }
 
 function destroy() {
-    terminate
+#    terminate
     printf "clean Docker image...:"
-#    sudo docker rmi docker_opendds 
+    sudo docker rmi docker_opendds 
     print_success
     printf "clean Vagrant box...:"
-#    vagrant destroy
+    vm_id=$(vagrant global-status | grep ' opendds ' | gawk '{print $1}')
+    if  [ -n "$vm_id" ]; then 
+	vagrant destroy $vm_id
+    fi
+    vagrant box remove dds
     print_success
 }
 
 function run() {
 
     printf "run inforepo..."
-    # vagrant provision &
-    # sleep 30
+    vagrant up --no-provision
+    if [ $# -ne 0 ]; then
+	# sed -i 's/dds_build_win/$2/g' install_opendds_autobuild.bat
+	# vagrant ssh -c "c:\vagrant\install_opendss_autobuild.bat"
+    else
+#	 vagrant ssh -c "c:\vagrant\install_opendss_configure.bat"
+    fi
     print_success
     
     printf "run publisher..."
-    # docker exec \
-    # 	opendds_update \
-    # 	/scripts/publisher.sh
-    # sleep 5
+    docker start pub
+    if [ $# -ne 0 ]; then
+#	docker exec -d pub \
+#	    /scripts/publisher_autobuild.sh $1
+     else
+#	docker exec -d pub \
+#	    /scripts/publisher.sh
+    fi
     print_success
     
     printf  "run subscriber..."
-    # docker exec \
-    # 	opendds_update \
-    # 	/scripts/subscriber.sh
+    docker start sub
+    if [ $# -ne 0 ]; then
+#	docker exec -d sub \
+#	    /scripts/subscriber_autobuild.sh $1
+     else
+#	docker exec -d sub \
+#	    /scripts/subscriber.sh
+    fi
     print_success
 }
 
 function terminate() {
     printf "terminate Virtualbox VM..."
-#    vagrant halt;
+    cd vagrant-opendds && vagrant halt
+    cd ..
     print_success
     printf "terminate Docker container..."
-#    docker stop pub sub;
+    docker stop pub sub;
     print_success
 }
 
@@ -152,8 +172,11 @@ function load() {
     printf "check port of subscriber...\t%u\n" "$sub_port"
 
     printf "load inforepo...:"
-    # vagrant up --no-provision &
-    # sleep 30
+    vm_name=repo_vm
+    sed -e "s/repo_port/$repo_port/g" \
+	-e "s/vm_name/$vm_name/g" \
+	Vagrant_template > Vagrantfile
+    vagrant up
     print_success
 
     printf "check ip of inforepo...:"
@@ -166,38 +189,39 @@ function load() {
 	fail "no virtulbox vm..."
     fi 
     repo_ip=$(echo $repo_gateway | gawk -F. '{print $1"."$2"."$3"."$4+1}')
-    sed -e "s/repo_port/$repo_port/g" \
-	-e "s/repo_ip/$repo_ip/g" \
-	-e "s/repo_gateway/$repo_gateway/g" \
-	./scripts/run_dds_win_template.bat > ./scripts/run_dds_win.bat ;
+    # sed -e "s/repo_port/$repo_port/g" \
+    # 	-e "s/repo_ip/$repo_ip/g" \
+    # 	-e "s/repo_gateway/$repo_gateway/g" \
+    # 	./scripts/run_dds_win_template.bat > ./scripts/run_dds_win.bat ;
     printf "\t%s\n" "$repo_ip"
+
     
     printf "load publisher..."
-    # docker run \
-    # 	-d --name pub -v "$PWD/scripts:/scripts" -w /scripts --env "repo_port=$repo_port" \
-    # 	--env "repo_ip=$repo_ip"  --env "host_port=$host_port" \
-    # 	-p $host_port \
-    # 	opendds_update \
-    # 	/bin/bash
-    #sleep 5
+    docker run \
+    	-d --name pub -v "$PWD/scripts:/scripts" -w /scripts --env "repo_port=$repo_port" \
+    	--env "repo_ip=$repo_ip"  --env "host_port=$host_port" \
+    	-p $repo_port \
+    	opendds_update \
+    	/bin/bash
     print_success
     
     printf  "load subscriber..."
-    # docker run \
-    # 	-d --name sub -v "$PWD/scripts:/scripts" -w /scripts --env "repo_port=$repo_port" \
-    # 	--env "repo_ip=$repo_ip" --env "host_port=$host_port" \
-    # 	-p $host_port \
-    # 	opendds_update \
-    # 	/bin/bash
+    docker run \
+    	-d --name sub -v "$PWD/scripts:/scripts" -w /scripts --env "repo_port=$repo_port" \
+    	--env "repo_ip=$repo_ip" --env "host_port=$host_port" \
+    	-p $repo_port \
+    	opendds_update \
+    	/bin/bash
     print_success
 }
 
 function clean() {
     printf "clean Virutalbox VM..."
-#    vagrant destroy;
+    cd vagrant-opendds && vagrant destroy -f
+    cd ..
     print_success
     printf "clean Docker container..."
-#    docker rm -f pub sub;
+    docker rm -f pub sub;
     print_success
 }
 
@@ -227,7 +251,7 @@ do
 	    help;
 	    exit ;;
      	-b | --bootstrap )
-	    printf "bootstrap infrastructure for the platform (hours long), are you sure? [N/y]\n"
+	    printf "bootstrap may take hours depending on your network connection...\n"
 	    shift 2;
 	    linux_cfg_xml=" "
 	    win_cfg_xml=" "
@@ -243,7 +267,14 @@ do
 	    break ;;
      	-r | --run )
 	    printf "run test...\n";
-	    run ${ports[@]};
+	    shift 2;
+	    linux_cfg_xml=" "
+	    win_cfg_xml=" "
+	    if [ $# -ne 0 ] ; then
+		linux_cfg_xml=$1
+		win_cfg_xml=$2
+	    fi 
+	    run $linux_cfg_xml $win_cfg_xml
 	    break ;;
      	-l | --load )
 	    printf "load the platform...\n";
