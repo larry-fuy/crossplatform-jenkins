@@ -53,7 +53,8 @@
 
   <!-- Post build -->
 <!--
-  <command name="anonymous_shell" options="perl java/build_scripts/jms_scoreboard.pl test "/>
+    <command name="auto_run_tests"  options="-a -t -o -Config LINUXA"/>
+    <command name="anonymous_shell" options="perl java/build_scripts/jms_scoreboard.pl test "/>
 -->
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>

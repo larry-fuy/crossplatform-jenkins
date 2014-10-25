@@ -77,11 +77,11 @@ function bootstrap() {
     # rebuild OpenDDS docker container
     printf "build Docker image..."
     sudo docker rmi docker_opendds 
-    docker build --force-rm=true --no-cache=true -t docker_opendds docker-opendds/Dockerfile
+    sudo docker build --force-rm=true --no-cache=true -t docker_opendds docker-opendds/Dockerfile
     print_success
 
     printf "build Vagrant box..."
-    vagrant box remove --force dds
+    sudo vagrant box remove --force dds
     cd vagrant-opendds && ./build.sh
     cd ..
     print_success
@@ -110,18 +110,18 @@ function destroy() {
     sudo docker rmi docker_opendds 
     print_success
     printf "clean Vagrant box...:"
-    vm_id=$(vagrant global-status | grep ' opendds ' | gawk '{print $1}')
+    vm_id=$(sudo vagrant global-status | grep ' opendds ' | gawk '{print $1}')
     if  [ -n "$vm_id" ]; then 
-	vagrant destroy -f $vm_id
+	sudo vagrant destroy -f $vm_id
     fi
-    vagrant box remove -f dds
+    sudo vagrant box remove -f dds
     print_success
 }
 
 function run() {
 
     printf "run inforepo..."
-    vagrant up --no-provision
+    sudo vagrant up --no-provision
     # if [ $# -ne 0 ]; then
     # 	sed -i 's/dds_build_win/$2/g' install_opendds_autobuild.bat
     # 	vagrant ssh -c "c:\vagrant\install_opendss_autobuild.bat"
@@ -131,23 +131,23 @@ function run() {
     print_success
     
     printf "run publisher..."
-    docker start pub
+    sudo docker start pub
    if [ $# -ne 0 ]; then
-	docker exec -d pub \
+	sudo docker exec -d pub \
 	    /scripts/publisher_autobuild.sh $1
     else
-	docker exec -d pub \
+	sudo docker exec -d pub \
 	    /scripts/publisher.sh
    fi
     print_success
     
     printf  "run subscriber..."
-    docker start sub
+    sudo docker start sub
    if [ $# -ne 0 ]; then
-	docker exec -d sub \
+	sudo docker exec -d sub \
 	    /scripts/subscriber_autobuild.sh $1
     else
-	docker exec -d sub \
+	sudo docker exec -d sub \
 	    /scripts/subscriber.sh
    fi
     print_success
@@ -159,7 +159,7 @@ function terminate() {
     cd ..
     print_success
     printf "terminate Docker container..."
-    docker stop pub sub;
+    sudo docker stop pub sub;
     print_success
 }
 
@@ -176,7 +176,7 @@ function load() {
     sed -e "s/repo_port/$repo_port/g" \
 	-e "s/vm_name/$vm_name/g" \
 	Vagrant_template > Vagrantfile
-    vagrant up
+    sudo vagrant up
     print_success
 
     printf "check ip of inforepo...:"
@@ -197,7 +197,7 @@ function load() {
 
     
     printf "load publisher..."
-    docker run \
+    sudo docker run \
     	-d --name pub -v "$PWD/scripts:/scripts" -w /scripts --env "repo_port=$repo_port" \
     	--env "repo_ip=$repo_ip"  --env "host_port=$host_port" \
     	-p $repo_port \
@@ -206,7 +206,7 @@ function load() {
     print_success
     
     printf  "load subscriber..."
-    docker run \
+    sudo docker run \
     	-d --name sub -v "$PWD/scripts:/scripts" -w /scripts --env "repo_port=$repo_port" \
     	--env "repo_ip=$repo_ip" --env "host_port=$host_port" \
     	-p $repo_port \
@@ -217,11 +217,11 @@ function load() {
 
 function clean() {
     printf "clean Virutalbox VM..."
-    cd vagrant-opendds && vagrant destroy -f
+    cd vagrant-opendds && sudo vagrant destroy -f
     cd ..
     print_success
     printf "clean Docker container..."
-    docker rm -f pub sub;
+    sudo docker rm -f pub sub;
     print_success
 }
 
