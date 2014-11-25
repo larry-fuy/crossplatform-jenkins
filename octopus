@@ -84,31 +84,31 @@ function bootstrap() {
     # rebuild OpenDDS docker container
     printf "build Docker image..."
     sudo docker rmi docker_opendds 
-    sudo docker build --force-rm=true --no-cache=true -t docker_opendds docker-opendds/
+    sudo docker build --force-rm=true --no-cache=true -t docker_opendds ./docker-opendds/
     print_success
 
-    printf "build Vagrant box..."
-    sudo vagrant box remove --force dds
-    cd vagrant-opendds && ./build.sh
-    cd ..
-    print_success
+    # printf "build Vagrant box..."
+    # sudo vagrant box remove --force dds
+    # cd vagrant-opendds && ./build.sh
+    # cd ..
+    # print_success
 
-    # Let linux kernel forward the packet
-    printf "enable Linux kernel forwarding packets..."
-    forward=$(cat /proc/sys/net/ipv4/ip_forward)
-    if [ $forward -eq 1 ]; then
-	echo "echo 1 > /proc/sys/net/ipv4/ip_forward" | sudo sh
-	print_success
-    else
-	fail "cannot let Linux kernel forwarding packets..."
-    fi
+    # # Let linux kernel forward the packet
+    # printf "enable Linux kernel forwarding packets..."
+    # forward=$(cat /proc/sys/net/ipv4/ip_forward)
+    # if [ $forward -eq 1 ]; then
+    # 	echo "echo 1 > /proc/sys/net/ipv4/ip_forward" | sudo sh
+    # 	print_success
+    # else
+    # 	fail "cannot let Linux kernel forwarding packets..."
+    # fi
 
-    printf "check virtualbox bridge..."
-    vboxnet=$(ip addr show vboxnet0 > /dev/null)
-    if ! [ "$vboxnet" == "" ] ; then
-	vboxmanage hostonlyif create
-    fi
-    print_success
+    # printf "check virtualbox bridge..."
+    # vboxnet=$(ip addr show vboxnet0 > /dev/null)
+    # if ! [ "$vboxnet" == "" ] ; then
+    # 	vboxmanage hostonlyif create
+    # fi
+    # print_success
 }
 
 # Destroy the whole platform
